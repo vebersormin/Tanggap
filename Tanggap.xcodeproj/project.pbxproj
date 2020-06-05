@@ -1,0 +1,511 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8209D4992489337E002FAA85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8209D4982489337E002FAA85 /* AppDelegate.swift */; };
+		8209D49B2489337E002FAA85 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8209D49A2489337E002FAA85 /* SceneDelegate.swift */; };
+		8209D49D2489337E002FAA85 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8209D49C2489337E002FAA85 /* ViewController.swift */; };
+		8209D4A02489337E002FAA85 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8209D49E2489337E002FAA85 /* Main.storyboard */; };
+		8209D4A224893381002FAA85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8209D4A124893381002FAA85 /* Assets.xcassets */; };
+		8209D4A524893381002FAA85 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8209D4A324893381002FAA85 /* LaunchScreen.storyboard */; };
+		8209D4AD24893463002FAA85 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8209D4AC24893463002FAA85 /* GoogleService-Info.plist */; };
+		82237C432489F0B800075817 /* PhoneVerificationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82237C422489F0B800075817 /* PhoneVerificationVC.swift */; };
+		82237C452489F40400075817 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82237C442489F40400075817 /* Extension.swift */; };
+		82237C47248A040900075817 /* PhoneRegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82237C46248A040900075817 /* PhoneRegisterVC.swift */; };
+		82237C49248A09B000075817 /* RegisterUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82237C48248A09B000075817 /* RegisterUser.swift */; };
+		82237C4B248A0F2800075817 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82237C4A248A0F2800075817 /* Constant.swift */; };
+		82237C4D248A2F9700075817 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82237C4C248A2F9700075817 /* HomeVC.swift */; };
+		823986E82489369200B060D3 /* DetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823986E62489369200B060D3 /* DetailCell.swift */; };
+		823986E92489369200B060D3 /* DetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 823986E72489369200B060D3 /* DetailCell.xib */; };
+		823986EB2489378C00B060D3 /* DetailUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823986EA2489378C00B060D3 /* DetailUser.swift */; };
+		87152C0CAC457D544A19D7FB /* Pods_Tanggap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D3E86AE8F5A0FABC34C0980 /* Pods_Tanggap.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		068E38158AB6040ADB467C9A /* Pods-Tanggap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tanggap.release.xcconfig"; path = "Target Support Files/Pods-Tanggap/Pods-Tanggap.release.xcconfig"; sourceTree = "<group>"; };
+		2D3E86AE8F5A0FABC34C0980 /* Pods_Tanggap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tanggap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8209D4952489337E002FAA85 /* Tanggap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tanggap.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8209D4982489337E002FAA85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8209D49A2489337E002FAA85 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		8209D49C2489337E002FAA85 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8209D49F2489337E002FAA85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8209D4A124893381002FAA85 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8209D4A424893381002FAA85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8209D4A624893381002FAA85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8209D4AC24893463002FAA85 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		82237C422489F0B800075817 /* PhoneVerificationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneVerificationVC.swift; sourceTree = "<group>"; };
+		82237C442489F40400075817 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		82237C46248A040900075817 /* PhoneRegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneRegisterVC.swift; sourceTree = "<group>"; };
+		82237C48248A09B000075817 /* RegisterUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUser.swift; sourceTree = "<group>"; };
+		82237C4A248A0F2800075817 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		82237C4C248A2F9700075817 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		823986E62489369200B060D3 /* DetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCell.swift; sourceTree = "<group>"; };
+		823986E72489369200B060D3 /* DetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailCell.xib; sourceTree = "<group>"; };
+		823986EA2489378C00B060D3 /* DetailUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailUser.swift; sourceTree = "<group>"; };
+		E7AB71E65E487FCF0F4E58D0 /* Pods-Tanggap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tanggap.debug.xcconfig"; path = "Target Support Files/Pods-Tanggap/Pods-Tanggap.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8209D4922489337E002FAA85 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87152C0CAC457D544A19D7FB /* Pods_Tanggap.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		72E64052C1CBCF4DCF0C6A55 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E7AB71E65E487FCF0F4E58D0 /* Pods-Tanggap.debug.xcconfig */,
+				068E38158AB6040ADB467C9A /* Pods-Tanggap.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		8209D48C2489337E002FAA85 = {
+			isa = PBXGroup;
+			children = (
+				8209D4972489337E002FAA85 /* Tanggap */,
+				8209D4962489337E002FAA85 /* Products */,
+				72E64052C1CBCF4DCF0C6A55 /* Pods */,
+				AA39F7CE517D5815C7B7B472 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8209D4962489337E002FAA85 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8209D4952489337E002FAA85 /* Tanggap.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8209D4972489337E002FAA85 /* Tanggap */ = {
+			isa = PBXGroup;
+			children = (
+				823986F024894B3700B060D3 /* Cells */,
+				823986EF24894B1200B060D3 /* Xibs */,
+				823986EE24894B0600B060D3 /* Model */,
+				823986ED24894B0100B060D3 /* View */,
+				823986EC24894AF700B060D3 /* Controller */,
+				8209D4A124893381002FAA85 /* Assets.xcassets */,
+				8209D4AC24893463002FAA85 /* GoogleService-Info.plist */,
+				8209D4A624893381002FAA85 /* Info.plist */,
+			);
+			path = Tanggap;
+			sourceTree = "<group>";
+		};
+		823986EC24894AF700B060D3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8209D49C2489337E002FAA85 /* ViewController.swift */,
+				8209D4982489337E002FAA85 /* AppDelegate.swift */,
+				8209D49A2489337E002FAA85 /* SceneDelegate.swift */,
+				82237C422489F0B800075817 /* PhoneVerificationVC.swift */,
+				82237C46248A040900075817 /* PhoneRegisterVC.swift */,
+				82237C4C248A2F9700075817 /* HomeVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		823986ED24894B0100B060D3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8209D4A324893381002FAA85 /* LaunchScreen.storyboard */,
+				8209D49E2489337E002FAA85 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		823986EE24894B0600B060D3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				82237C442489F40400075817 /* Extension.swift */,
+				823986EA2489378C00B060D3 /* DetailUser.swift */,
+				82237C48248A09B000075817 /* RegisterUser.swift */,
+				82237C4A248A0F2800075817 /* Constant.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		823986EF24894B1200B060D3 /* Xibs */ = {
+			isa = PBXGroup;
+			children = (
+				823986E72489369200B060D3 /* DetailCell.xib */,
+			);
+			path = Xibs;
+			sourceTree = "<group>";
+		};
+		823986F024894B3700B060D3 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				823986E62489369200B060D3 /* DetailCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		AA39F7CE517D5815C7B7B472 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2D3E86AE8F5A0FABC34C0980 /* Pods_Tanggap.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8209D4942489337E002FAA85 /* Tanggap */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8209D4A924893381002FAA85 /* Build configuration list for PBXNativeTarget "Tanggap" */;
+			buildPhases = (
+				79FEE2293F676C8555AEB0D0 /* [CP] Check Pods Manifest.lock */,
+				8209D4912489337E002FAA85 /* Sources */,
+				8209D4922489337E002FAA85 /* Frameworks */,
+				8209D4932489337E002FAA85 /* Resources */,
+				7C454B34EDAE68554A2885AE /* [CP] Embed Pods Frameworks */,
+				36331512F032A4DC917CFC14 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Tanggap;
+			productName = Tanggap;
+			productReference = 8209D4952489337E002FAA85 /* Tanggap.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8209D48D2489337E002FAA85 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1110;
+				LastUpgradeCheck = 1110;
+				ORGANIZATIONNAME = Veber;
+				TargetAttributes = {
+					8209D4942489337E002FAA85 = {
+						CreatedOnToolsVersion = 11.1;
+					};
+				};
+			};
+			buildConfigurationList = 8209D4902489337E002FAA85 /* Build configuration list for PBXProject "Tanggap" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8209D48C2489337E002FAA85;
+			productRefGroup = 8209D4962489337E002FAA85 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8209D4942489337E002FAA85 /* Tanggap */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8209D4932489337E002FAA85 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8209D4A524893381002FAA85 /* LaunchScreen.storyboard in Resources */,
+				8209D4A224893381002FAA85 /* Assets.xcassets in Resources */,
+				8209D4A02489337E002FAA85 /* Main.storyboard in Resources */,
+				8209D4AD24893463002FAA85 /* GoogleService-Info.plist in Resources */,
+				823986E92489369200B060D3 /* DetailCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		36331512F032A4DC917CFC14 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tanggap/Pods-Tanggap-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tanggap/Pods-Tanggap-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Tanggap/Pods-Tanggap-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		79FEE2293F676C8555AEB0D0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Tanggap-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7C454B34EDAE68554A2885AE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tanggap/Pods-Tanggap-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tanggap/Pods-Tanggap-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Tanggap/Pods-Tanggap-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8209D4912489337E002FAA85 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82237C47248A040900075817 /* PhoneRegisterVC.swift in Sources */,
+				82237C49248A09B000075817 /* RegisterUser.swift in Sources */,
+				8209D49D2489337E002FAA85 /* ViewController.swift in Sources */,
+				8209D4992489337E002FAA85 /* AppDelegate.swift in Sources */,
+				82237C452489F40400075817 /* Extension.swift in Sources */,
+				82237C432489F0B800075817 /* PhoneVerificationVC.swift in Sources */,
+				823986EB2489378C00B060D3 /* DetailUser.swift in Sources */,
+				82237C4B248A0F2800075817 /* Constant.swift in Sources */,
+				823986E82489369200B060D3 /* DetailCell.swift in Sources */,
+				82237C4D248A2F9700075817 /* HomeVC.swift in Sources */,
+				8209D49B2489337E002FAA85 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8209D49E2489337E002FAA85 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8209D49F2489337E002FAA85 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8209D4A324893381002FAA85 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8209D4A424893381002FAA85 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8209D4A724893381002FAA85 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8209D4A824893381002FAA85 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8209D4AA24893381002FAA85 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7AB71E65E487FCF0F4E58D0 /* Pods-Tanggap.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LGZ9VADH98;
+				INFOPLIST_FILE = Tanggap/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.vebersormin.Tanggap;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8209D4AB24893381002FAA85 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 068E38158AB6040ADB467C9A /* Pods-Tanggap.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LGZ9VADH98;
+				INFOPLIST_FILE = Tanggap/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.vebersormin.Tanggap;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8209D4902489337E002FAA85 /* Build configuration list for PBXProject "Tanggap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8209D4A724893381002FAA85 /* Debug */,
+				8209D4A824893381002FAA85 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8209D4A924893381002FAA85 /* Build configuration list for PBXNativeTarget "Tanggap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8209D4AA24893381002FAA85 /* Debug */,
+				8209D4AB24893381002FAA85 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8209D48D2489337E002FAA85 /* Project object */;
+}

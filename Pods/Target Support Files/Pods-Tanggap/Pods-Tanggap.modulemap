@@ -1,0 +1,6 @@
+framework module Pods_Tanggap {
+  umbrella header "Pods-Tanggap-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -14,6 +14,7 @@
 		8209D4A224893381002FAA85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8209D4A124893381002FAA85 /* Assets.xcassets */; };
 		8209D4A524893381002FAA85 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8209D4A324893381002FAA85 /* LaunchScreen.storyboard */; };
 		8209D4AD24893463002FAA85 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8209D4AC24893463002FAA85 /* GoogleService-Info.plist */; };
+		821BF5DE248E0CE800818D01 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821BF5DD248E0CE800818D01 /* MainVC.swift */; };
 		82237C432489F0B800075817 /* PhoneVerificationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82237C422489F0B800075817 /* PhoneVerificationVC.swift */; };
 		82237C452489F40400075817 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82237C442489F40400075817 /* Extension.swift */; };
 		82237C47248A040900075817 /* PhoneRegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82237C46248A040900075817 /* PhoneRegisterVC.swift */; };
@@ -23,6 +24,7 @@
 		823986E82489369200B060D3 /* DetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823986E62489369200B060D3 /* DetailCell.swift */; };
 		823986E92489369200B060D3 /* DetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 823986E72489369200B060D3 /* DetailCell.xib */; };
 		823986EB2489378C00B060D3 /* DetailUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823986EA2489378C00B060D3 /* DetailUser.swift */; };
+		82CDA961248DF11E00A7F630 /* RoundedViewClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CDA960248DF11E00A7F630 /* RoundedViewClass.swift */; };
 		87152C0CAC457D544A19D7FB /* Pods_Tanggap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D3E86AE8F5A0FABC34C0980 /* Pods_Tanggap.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +40,7 @@
 		8209D4A424893381002FAA85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8209D4A624893381002FAA85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8209D4AC24893463002FAA85 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		821BF5DD248E0CE800818D01 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		82237C422489F0B800075817 /* PhoneVerificationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneVerificationVC.swift; sourceTree = "<group>"; };
 		82237C442489F40400075817 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		82237C46248A040900075817 /* PhoneRegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneRegisterVC.swift; sourceTree = "<group>"; };
@@ -47,6 +50,7 @@
 		823986E62489369200B060D3 /* DetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCell.swift; sourceTree = "<group>"; };
 		823986E72489369200B060D3 /* DetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailCell.xib; sourceTree = "<group>"; };
 		823986EA2489378C00B060D3 /* DetailUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailUser.swift; sourceTree = "<group>"; };
+		82CDA960248DF11E00A7F630 /* RoundedViewClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedViewClass.swift; sourceTree = "<group>"; };
 		E7AB71E65E487FCF0F4E58D0 /* Pods-Tanggap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tanggap.debug.xcconfig"; path = "Target Support Files/Pods-Tanggap/Pods-Tanggap.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,6 +117,7 @@
 				82237C422489F0B800075817 /* PhoneVerificationVC.swift */,
 				82237C46248A040900075817 /* PhoneRegisterVC.swift */,
 				82237C4C248A2F9700075817 /* HomeVC.swift */,
+				821BF5DD248E0CE800818D01 /* MainVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -120,6 +125,7 @@
 		823986ED24894B0100B060D3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				82CDA960248DF11E00A7F630 /* RoundedViewClass.swift */,
 				8209D4A324893381002FAA85 /* LaunchScreen.storyboard */,
 				8209D49E2489337E002FAA85 /* Main.storyboard */,
 			);
@@ -299,6 +305,7 @@
 				82237C47248A040900075817 /* PhoneRegisterVC.swift in Sources */,
 				82237C49248A09B000075817 /* RegisterUser.swift in Sources */,
 				8209D49D2489337E002FAA85 /* ViewController.swift in Sources */,
+				82CDA961248DF11E00A7F630 /* RoundedViewClass.swift in Sources */,
 				8209D4992489337E002FAA85 /* AppDelegate.swift in Sources */,
 				82237C452489F40400075817 /* Extension.swift in Sources */,
 				82237C432489F0B800075817 /* PhoneVerificationVC.swift in Sources */,
@@ -307,6 +314,7 @@
 				823986E82489369200B060D3 /* DetailCell.swift in Sources */,
 				82237C4D248A2F9700075817 /* HomeVC.swift in Sources */,
 				8209D49B2489337E002FAA85 /* SceneDelegate.swift in Sources */,
+				821BF5DE248E0CE800818D01 /* MainVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

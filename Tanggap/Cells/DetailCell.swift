@@ -12,16 +12,25 @@ import Firebase
 class DetailCell: UITableViewCell {
     
     @IBOutlet weak var nameTextField: UILabel!
-    @IBOutlet weak var qtyTextField: UILabel!
+    @IBOutlet weak var addrTextField: UILabel!
+    @IBOutlet weak var descTextField: UILabel!
+    @IBOutlet weak var amountOfQtyTextField: UILabel!
     
 
     override func awakeFromNib() {
         super.awakeFromNib()
     }
     
+    @IBAction func donateBtnPressed(_ sender: Any) {
+        
+    }
+    
+    
     func configCell(configUserDetail: userDetail){
         nameTextField.text = configUserDetail.name
-        qtyTextField.text = String(configUserDetail.qty)
+        addrTextField.text = configUserDetail.addr
+        descTextField.text = configUserDetail.desc
+        amountOfQtyTextField.text = String(configUserDetail.qty)
     }
     
 }

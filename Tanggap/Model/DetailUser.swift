@@ -12,5 +12,9 @@ import Firebase
 
 struct userDetail {
     var name: String
+    var desc: String
+    var addr: String
+    var phone: Int
     var qty: Int
+    var time: Timestamp
 }

@@ -526,7 +526,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VKO-BQ-EL7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3034.7826086956525" y="-317.41071428571428"/>
+            <point key="canvasLocation" x="3035" y="-317"/>
         </scene>
         <!--Notification-->
         <scene sceneID="cTn-ah-hs5">
@@ -549,6 +549,46 @@
                 <customObject id="xqX-yx-Yww" customClass="RAMBounceAnimation" customModule="RAMAnimatedTabBarController"/>
             </objects>
             <point key="canvasLocation" x="5532" y="561"/>
+        </scene>
+        <!--HomeVC-->
+        <scene sceneID="J20-Jg-2P6">
+            <objects>
+                <viewController id="fXv-tV-bxu" customClass="HomeVC" customModule="Tanggap" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TlS-D1-ow7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dQA-ik-yuf">
+                                <rect key="frame" x="68" y="88" width="338" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0.24 - Feeds Background" translatesAutoresizingMaskIntoConstraints="NO" id="yeT-fu-rIg">
+                                <rect key="frame" x="0.0" y="88" width="60" height="725"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="eC1-mT-ZYk"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="yeT-fu-rIg" firstAttribute="leading" secondItem="Rw6-qi-Jgn" secondAttribute="leading" id="CRb-1F-W3v"/>
+                            <constraint firstItem="yeT-fu-rIg" firstAttribute="top" secondItem="Rw6-qi-Jgn" secondAttribute="top" id="F2z-HT-fXh"/>
+                            <constraint firstItem="Rw6-qi-Jgn" firstAttribute="trailing" secondItem="dQA-ik-yuf" secondAttribute="trailing" constant="8" id="Rem-o3-U3e"/>
+                            <constraint firstItem="dQA-ik-yuf" firstAttribute="top" secondItem="Rw6-qi-Jgn" secondAttribute="top" id="W9x-97-0K0"/>
+                            <constraint firstItem="Rw6-qi-Jgn" firstAttribute="bottom" secondItem="yeT-fu-rIg" secondAttribute="bottom" id="oXb-Db-c6k"/>
+                            <constraint firstItem="Rw6-qi-Jgn" firstAttribute="bottom" secondItem="dQA-ik-yuf" secondAttribute="bottom" id="p2C-1a-lIg"/>
+                            <constraint firstItem="dQA-ik-yuf" firstAttribute="leading" secondItem="yeT-fu-rIg" secondAttribute="trailing" constant="8" id="z3v-ac-OBp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Rw6-qi-Jgn"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="M31-zh-8mw"/>
+                    <connections>
+                        <outlet property="theTableView" destination="dQA-ik-yuf" id="3a1-I6-W53"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sTa-Eu-NLG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6440.579710144928" y="559.82142857142856"/>
         </scene>
         <!--Settings-->
         <scene sceneID="IdD-VK-gqi">
@@ -573,10 +613,10 @@
             </objects>
             <point key="canvasLocation" x="4271" y="1309"/>
         </scene>
-        <!--HomeVC-->
+        <!--MainVC-->
         <scene sceneID="ssb-hk-5CZ">
             <objects>
-                <viewController id="UNg-Wh-PfA" customClass="HomeVC" customModule="Tanggap" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="UNg-Wh-PfA" customClass="MainVC" customModule="Tanggap" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8AZ-pg-j2Y">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -600,6 +640,9 @@
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vLc-Ke-je0">
                                         <rect key="frame" x="0.0" y="150" width="320" height="66"/>
                                         <state key="normal" backgroundImage="0.8 - Donate Button"/>
+                                        <connections>
+                                            <segue destination="fXv-tV-bxu" kind="show" id="Xwb-KF-4bc"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -693,6 +736,7 @@
         <image name="0.17 - Request Button" width="317" height="60"/>
         <image name="0.18 - Send OTP Button" width="343" height="56"/>
         <image name="0.2 - Onboarding Screen" width="375" height="812"/>
+        <image name="0.24 - Feeds Background" width="137" height="812"/>
         <image name="0.6 - Signin Button" width="343" height="56"/>
         <image name="0.8 - Donate Button" width="320" height="66"/>
         <image name="GWK" width="750" height="750"/>

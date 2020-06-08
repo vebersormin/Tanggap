@@ -21,7 +21,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="502" height="185"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M5x-6p-o46">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M5x-6p-o46" customClass="RoundedShadowView" customModule="Tanggap" customModuleProvider="target">
                         <rect key="frame" x="8" y="8" width="486" height="169"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DESCRIPTION" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ys5-oy-QZ8">
@@ -94,7 +94,6 @@
                         </constraints>
                     </view>
                 </subviews>
-                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstItem="M5x-6p-o46" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="976-aH-IMc"/>
                     <constraint firstAttribute="bottom" secondItem="M5x-6p-o46" secondAttribute="bottom" constant="8" id="aft-3f-nbE"/>

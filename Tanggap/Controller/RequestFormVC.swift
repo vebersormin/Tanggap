@@ -72,8 +72,16 @@ class RequestFormVC: UIViewController {
             if let e = error {
                 self.simpleAlert(title: "Error", msg: "\(e)")
             }else {
-                self.simpleAlert(title: "Success", msg: "Your Request Form Has Been Posted Succesfully")
+                self.toFinishScreen()
             }
         }
+    }
+    
+    @objc func toFinishScreen (){
+        let sb = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "finishScreenStoryboard")
+        
+        sb.modalPresentationStyle = .fullScreen
+        
+        self.present(sb, animated: true, completion: nil)
     }
 }

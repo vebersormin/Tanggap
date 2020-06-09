@@ -92,9 +92,11 @@ class PhoneVerificationVC: UIViewController {
     }
     
     @objc func goToHomeScreen(){
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let homeScreen = storyboard.instantiateViewController(withIdentifier: "homeStoryboard")
-        self.present(homeScreen, animated: true, completion: nil)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "homeStoryboard")
+        
+        storyboard.modalPresentationStyle = .fullScreen
+        
+        self.present(storyboard, animated: true, completion: nil)
     }
     
 }

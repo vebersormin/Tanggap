@@ -553,7 +553,7 @@
         <!--HomeVC-->
         <scene sceneID="J20-Jg-2P6">
             <objects>
-                <viewController id="fXv-tV-bxu" customClass="HomeVC" customModule="Tanggap" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="fXv-tV-bxu" customClass="HomeVC" customModule="Tanggap" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TlS-D1-ow7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -616,7 +616,7 @@
         <!--MainVC-->
         <scene sceneID="ssb-hk-5CZ">
             <objects>
-                <viewController id="UNg-Wh-PfA" customClass="MainVC" customModule="Tanggap" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mainScreenStoryboard" modalPresentationStyle="fullScreen" id="UNg-Wh-PfA" customClass="MainVC" customModule="Tanggap" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8AZ-pg-j2Y">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -666,12 +666,12 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wbq-CI-0R3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <customObject id="zKO-Eq-pde" customClass="RAMBounceAnimation" customModule="RAMAnimatedTabBarController"/>
             </objects>
-            <point key="canvasLocation" x="6442.0289855072469" y="-177.45535714285714"/>
+            <point key="canvasLocation" x="6441" y="-177"/>
         </scene>
         <!--Request Form-->
         <scene sceneID="092-FK-gVc">
             <objects>
-                <viewController id="Qzd-Jd-FeN" customClass="RequestFormVC" customModule="Tanggap" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="Qzd-Jd-FeN" customClass="RequestFormVC" customModule="Tanggap" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WXB-FW-jVm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -827,11 +827,12 @@
                         <outlet property="descBoxField" destination="rzm-Fa-IxX" id="cJc-bA-IkS"/>
                         <outlet property="nameTextField" destination="wgU-b9-xNo" id="pu1-sJ-K6P"/>
                         <outlet property="phoneTextField" destination="aix-X9-4VU" id="J6u-eP-Fa0"/>
+                        <segue destination="f2S-79-HDw" kind="show" identifier="toFinishScreenSegue" id="lu7-yQ-bAA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ghe-NW-7B0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7400.0000000000009" y="-177.45535714285714"/>
+            <point key="canvasLocation" x="7454" y="-177"/>
         </scene>
         <!--Animated Tab Bar Controller-->
         <scene sceneID="QRq-BT-tCH">
@@ -895,9 +896,88 @@
             </objects>
             <point key="canvasLocation" x="5531.884057971015" y="-177.45535714285714"/>
         </scene>
+        <!--Finish ScreenVC-->
+        <scene sceneID="Lx4-wb-xzO">
+            <objects>
+                <viewController storyboardIdentifier="finishScreenStoryboard" id="f2S-79-HDw" customClass="FinishScreenVC" customModule="Tanggap" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ioH-Lr-KbP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ymQ-4d-Sc0">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1iS-yA-Mbo">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="700"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h9F-nt-MqS">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="600"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0.11 - HasBeenPosted Screen" translatesAutoresizingMaskIntoConstraints="NO" id="6Z6-Zo-Dle">
+                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="600"/>
+                                                    </imageView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1sX-aB-cLf">
+                                                        <rect key="frame" x="10" y="484" width="394" height="66"/>
+                                                        <state key="normal" image="0.10 - Back To Home Button"/>
+                                                        <connections>
+                                                            <action selector="backToHomeBtnPressed:" destination="f2S-79-HDw" eventType="touchUpInside" id="7sL-Q9-YYY"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="6Z6-Zo-Dle" secondAttribute="trailing" id="4r1-Qb-kyF"/>
+                                                    <constraint firstAttribute="trailing" secondItem="1sX-aB-cLf" secondAttribute="trailing" constant="10" id="AwL-Mb-DLj"/>
+                                                    <constraint firstAttribute="bottom" secondItem="6Z6-Zo-Dle" secondAttribute="bottom" id="Bcs-ql-aq7"/>
+                                                    <constraint firstItem="6Z6-Zo-Dle" firstAttribute="leading" secondItem="h9F-nt-MqS" secondAttribute="leading" id="C7H-wT-Fjt"/>
+                                                    <constraint firstItem="1sX-aB-cLf" firstAttribute="leading" secondItem="h9F-nt-MqS" secondAttribute="leading" constant="10" id="QgO-Uk-nAr"/>
+                                                    <constraint firstItem="6Z6-Zo-Dle" firstAttribute="top" secondItem="h9F-nt-MqS" secondAttribute="top" id="SGa-Ev-JmQ"/>
+                                                    <constraint firstItem="1sX-aB-cLf" firstAttribute="centerX" secondItem="h9F-nt-MqS" secondAttribute="centerX" id="UpP-at-3dY"/>
+                                                    <constraint firstAttribute="height" constant="600" id="ddK-bo-lx0"/>
+                                                    <constraint firstAttribute="bottom" secondItem="1sX-aB-cLf" secondAttribute="bottom" constant="50" id="rOE-ZP-jr3"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6nC-zq-ScC">
+                                                <rect key="frame" x="0.0" y="600" width="414" height="100"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="cjO-G1-ZEb"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="1iS-yA-Mbo" firstAttribute="bottom" secondItem="1AK-QH-Mnw" secondAttribute="bottom" id="BY2-p6-z0Y"/>
+                                    <constraint firstItem="1iS-yA-Mbo" firstAttribute="trailing" secondItem="1AK-QH-Mnw" secondAttribute="trailing" id="BYR-9t-j72"/>
+                                    <constraint firstItem="1iS-yA-Mbo" firstAttribute="width" secondItem="kbK-Tr-fr3" secondAttribute="width" id="SG2-4F-pn7"/>
+                                    <constraint firstItem="1iS-yA-Mbo" firstAttribute="leading" secondItem="1AK-QH-Mnw" secondAttribute="leading" id="cDQ-NU-g4y"/>
+                                    <constraint firstItem="1iS-yA-Mbo" firstAttribute="top" secondItem="1AK-QH-Mnw" secondAttribute="top" id="fZC-EP-qEx"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="1AK-QH-Mnw"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="kbK-Tr-fr3"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ymQ-4d-Sc0" firstAttribute="leading" secondItem="JhI-BI-qcX" secondAttribute="leading" id="Ny6-72-YXQ"/>
+                            <constraint firstItem="ymQ-4d-Sc0" firstAttribute="top" secondItem="JhI-BI-qcX" secondAttribute="top" id="QAN-tW-xpH"/>
+                            <constraint firstItem="ymQ-4d-Sc0" firstAttribute="trailing" secondItem="JhI-BI-qcX" secondAttribute="trailing" id="hP6-Jy-r4V"/>
+                            <constraint firstItem="ymQ-4d-Sc0" firstAttribute="bottom" secondItem="JhI-BI-qcX" secondAttribute="bottom" id="q4s-C3-Scz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="JhI-BI-qcX"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="1OJ-tk-JBE"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Ay-8R-PIi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8510" y="-177"/>
+        </scene>
     </scenes>
     <resources>
         <image name="0.1 - Sign In Screen" width="3750" height="8121"/>
+        <image name="0.10 - Back To Home Button" width="341" height="66"/>
+        <image name="0.11 - HasBeenPosted Screen" width="375" height="812"/>
         <image name="0.14 - Register New Button" width="341" height="66"/>
         <image name="0.15 - Login Button" width="341" height="66"/>
         <image name="0.16 - RegisterToHomeButton" width="343" height="56"/>

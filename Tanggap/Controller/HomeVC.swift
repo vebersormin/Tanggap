@@ -57,6 +57,14 @@ class HomeVC: UIViewController {
             }
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "toRequestDetailSegue" {
+            let destVC = segue.destination as! RequestDetailVC
+            destVC.postForm = sender as? userDetail
+        }
+    }
 }
 
 extension HomeVC: UITableViewDelegate, UITableViewDataSource {
@@ -76,9 +84,14 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
         
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let selectedPost = feedArr[indexPath.row]
+        performSegue(withIdentifier: "toRequestDetailSegue", sender: selectedPost)
+    }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 200
     }
-    
     
 }

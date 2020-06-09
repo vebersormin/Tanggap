@@ -584,11 +584,170 @@
                     <navigationItem key="navigationItem" id="M31-zh-8mw"/>
                     <connections>
                         <outlet property="theTableView" destination="dQA-ik-yuf" id="3a1-I6-W53"/>
+                        <segue destination="RyW-g2-UCc" kind="show" identifier="toRequestDetailSegue" id="neP-hq-TS9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sTa-Eu-NLG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6440.579710144928" y="559.82142857142856"/>
+        </scene>
+        <!--Request DetailVC-->
+        <scene sceneID="H3V-1T-mKM">
+            <objects>
+                <viewController storyboardIdentifier="toRequestDetailStoryboard" id="RyW-g2-UCc" customClass="RequestDetailVC" customModule="Tanggap" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2PT-Lm-OHy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EdF-oh-zw8">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="0AT-Xm-DgA">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="700"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jgh-C8-8iJ">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="350"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="2la-e9-cyh">
+                                                        <rect key="frame" x="10" y="30" width="394" height="137"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jYd-Cv-k6G">
+                                                                <rect key="frame" x="0.0" y="0.0" width="394" height="24"/>
+                                                                <fontDescription key="fontDescription" name="PingFangSC-Semibold" family="PingFang SC" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hm1-1y-V4J">
+                                                                <rect key="frame" x="0.0" y="31" width="394" height="34"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j01-Jk-h6h">
+                                                                <rect key="frame" x="0.0" y="72" width="394" height="24"/>
+                                                                <fontDescription key="fontDescription" name="PingFangSC-Semibold" family="PingFang SC" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Address" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nPL-gh-OLq">
+                                                                <rect key="frame" x="0.0" y="103" width="394" height="34"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="g3i-uk-Ovt">
+                                                        <rect key="frame" x="10" y="177" width="394" height="145"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What They Need" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HyS-qZ-p5V">
+                                                                <rect key="frame" x="0.0" y="0.0" width="394" height="24"/>
+                                                                <fontDescription key="fontDescription" name="PingFangSC-Semibold" family="PingFang SC" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="JASON" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ccj-xU-Nlt">
+                                                                <rect key="frame" x="0.0" y="24" width="394" height="121"/>
+                                                                <color key="backgroundColor" red="0.83529411760000005" green="0.3921568627" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                            </textView>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="145" id="7Qn-Nb-Rgv"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="2la-e9-cyh" firstAttribute="leading" secondItem="jgh-C8-8iJ" secondAttribute="leading" constant="10" id="67C-0E-Ofk"/>
+                                                    <constraint firstItem="2la-e9-cyh" firstAttribute="top" secondItem="jgh-C8-8iJ" secondAttribute="top" constant="30" id="GzQ-ri-vPg"/>
+                                                    <constraint firstItem="g3i-uk-Ovt" firstAttribute="top" secondItem="2la-e9-cyh" secondAttribute="bottom" constant="10" id="IFs-bE-UnF"/>
+                                                    <constraint firstAttribute="trailing" secondItem="2la-e9-cyh" secondAttribute="trailing" constant="10" id="LWP-8N-tw9"/>
+                                                    <constraint firstAttribute="trailing" secondItem="g3i-uk-Ovt" secondAttribute="trailing" constant="10" id="LnK-dg-H1X"/>
+                                                    <constraint firstItem="g3i-uk-Ovt" firstAttribute="leading" secondItem="jgh-C8-8iJ" secondAttribute="leading" constant="10" id="Smi-ax-DGl"/>
+                                                    <constraint firstAttribute="height" constant="350" id="U8S-TV-vn0"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0co-od-Am9">
+                                                <rect key="frame" x="0.0" y="350" width="414" height="350"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="BBl-cy-e6a">
+                                                        <rect key="frame" x="10" y="10" width="162.5" height="60"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount Of Quantity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vww-CR-cA4">
+                                                                <rect key="frame" x="0.0" y="0.0" width="162.5" height="24"/>
+                                                                <fontDescription key="fontDescription" name="PingFangSC-Semibold" family="PingFang SC" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tHg-qV-5NS">
+                                                                <rect key="frame" x="0.0" y="26" width="32" height="34"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XIS-VO-X1j">
+                                                        <rect key="frame" x="10" y="259" width="394" height="66"/>
+                                                        <state key="normal" image="0.9 - Donate Now Button"/>
+                                                        <connections>
+                                                            <action selector="donateNowBtnPressed:" destination="RyW-g2-UCc" eventType="touchUpInside" id="FcZ-ww-i9h"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RDu-KL-aHn">
+                                                        <rect key="frame" x="35" y="183" width="166" height="66"/>
+                                                        <state key="normal" image="0.7 - Call Button"/>
+                                                        <connections>
+                                                            <action selector="callBtnPressed:" destination="RyW-g2-UCc" eventType="touchUpInside" id="sCL-O4-6xC"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="BBl-cy-e6a" firstAttribute="top" secondItem="0co-od-Am9" secondAttribute="top" constant="10" id="1x1-Rw-tke"/>
+                                                    <constraint firstItem="RDu-KL-aHn" firstAttribute="leading" secondItem="0co-od-Am9" secondAttribute="leading" constant="35" id="8Lb-Nx-LN7"/>
+                                                    <constraint firstItem="XIS-VO-X1j" firstAttribute="top" secondItem="RDu-KL-aHn" secondAttribute="bottom" constant="10" id="AmO-eu-pIW"/>
+                                                    <constraint firstItem="BBl-cy-e6a" firstAttribute="leading" secondItem="0co-od-Am9" secondAttribute="leading" constant="10" id="Cbt-c5-3ZL"/>
+                                                    <constraint firstAttribute="bottom" secondItem="XIS-VO-X1j" secondAttribute="bottom" constant="25" id="VJB-x6-RZA"/>
+                                                    <constraint firstAttribute="trailing" secondItem="XIS-VO-X1j" secondAttribute="trailing" constant="10" id="gWP-Wa-Nsr"/>
+                                                    <constraint firstItem="XIS-VO-X1j" firstAttribute="leading" secondItem="0co-od-Am9" secondAttribute="leading" constant="10" id="tNu-70-LjR"/>
+                                                    <constraint firstAttribute="height" constant="350" id="xdu-iD-d4J"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="0AT-Xm-DgA" firstAttribute="top" secondItem="dZY-YF-whL" secondAttribute="top" id="6Mf-0j-gUm"/>
+                                    <constraint firstItem="0AT-Xm-DgA" firstAttribute="leading" secondItem="dZY-YF-whL" secondAttribute="leading" id="EYI-rX-CpR"/>
+                                    <constraint firstItem="0AT-Xm-DgA" firstAttribute="width" secondItem="7QI-R1-Ssq" secondAttribute="width" id="Nrs-5z-2oQ"/>
+                                    <constraint firstItem="0AT-Xm-DgA" firstAttribute="trailing" secondItem="dZY-YF-whL" secondAttribute="trailing" id="sQR-aX-AJm"/>
+                                    <constraint firstItem="0AT-Xm-DgA" firstAttribute="bottom" secondItem="dZY-YF-whL" secondAttribute="bottom" id="t4w-3V-ZQN"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="dZY-YF-whL"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="7QI-R1-Ssq"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="EdF-oh-zw8" firstAttribute="bottom" secondItem="6oi-8f-pKd" secondAttribute="bottom" id="EUN-Zb-fmi"/>
+                            <constraint firstItem="EdF-oh-zw8" firstAttribute="trailing" secondItem="6oi-8f-pKd" secondAttribute="trailing" id="TdJ-Xg-GmX"/>
+                            <constraint firstItem="EdF-oh-zw8" firstAttribute="top" secondItem="6oi-8f-pKd" secondAttribute="top" id="dXX-Ju-lLX"/>
+                            <constraint firstItem="EdF-oh-zw8" firstAttribute="leading" secondItem="6oi-8f-pKd" secondAttribute="leading" id="rZ0-cu-cr9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6oi-8f-pKd"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Zdj-yc-1Z7"/>
+                    <connections>
+                        <outlet property="QtyTextField" destination="tHg-qV-5NS" id="RR6-DJ-Ek4"/>
+                        <outlet property="addressTextField" destination="nPL-gh-OLq" id="TRb-MH-qLq"/>
+                        <outlet property="descBoxTextField" destination="ccj-xU-Nlt" id="gkR-lH-FbK"/>
+                        <outlet property="nameTextField" destination="Hm1-1y-V4J" id="RXG-Qg-GWM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2qc-tP-YUr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7453.6231884057979" y="559.82142857142856"/>
         </scene>
         <!--Settings-->
         <scene sceneID="IdD-VK-gqi">
@@ -987,7 +1146,9 @@
         <image name="0.24 - Feeds Background" width="137" height="812"/>
         <image name="0.25 - RequestNow Button" width="341" height="66"/>
         <image name="0.6 - Signin Button" width="343" height="56"/>
+        <image name="0.7 - Call Button" width="166" height="66"/>
         <image name="0.8 - Donate Button" width="320" height="66"/>
+        <image name="0.9 - Donate Now Button" width="341" height="66"/>
         <image name="GWK" width="750" height="750"/>
         <image name="Pop BG-2" width="806" height="958"/>
         <image name="Welcome" width="638" height="981"/>

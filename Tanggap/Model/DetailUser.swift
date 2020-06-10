@@ -14,7 +14,7 @@ struct userDetail {
     var name: String
     var desc: String
     var addr: String
-    var phone: Int
+    var phone: String
     var qty: Int
     var time: Timestamp
 }

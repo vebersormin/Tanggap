@@ -40,7 +40,7 @@ class HomeVC: UIViewController {
                         if let requesterName = data["name"] as? String,
                         let requesterDesc = data["desc"] as? String,
                         let requesterAddr = data["addr"] as? String,
-                        let requesterPhone = data["phone"] as? Int,
+                        let requesterPhone = data["phone"] as? String,
                         let amountOfQty = data["qty"] as? Int,
                         let timeStamp = data["time"] as? Timestamp {
                             

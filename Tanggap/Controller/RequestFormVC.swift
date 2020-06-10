@@ -21,7 +21,7 @@ class RequestFormVC: UIViewController {
     
     var requesterName = ""
     var requesterAddr = ""
-    var requesterPhoneNum = 0
+    var requesterPhoneNum = ""
     var requesterDesc = ""
     var qtyAmount = 0
     
@@ -42,8 +42,7 @@ class RequestFormVC: UIViewController {
         guard let name = nameTextField.text, name.isNotEmpty,
             let address = addressTextField.text, address.isNotEmpty,
             let desc = descBoxField.text, desc.isNotEmpty,
-            let phoneString = phoneTextField.text, phoneString.isNotEmpty,
-            let phone = Int(phoneString),
+            let phone = phoneTextField.text, phone.isNotEmpty,
             let amountOfQtyString = amountOfQtyTextField.text, amountOfQtyString.isNotEmpty,
             let amountOfQty = Int(amountOfQtyString) else {
                 

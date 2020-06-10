@@ -16,7 +16,9 @@ class RequestDetailVC: UIViewController {
     @IBOutlet weak var QtyTextField: UITextField!
     
     var postForm: userDetail?
-
+    let application = UIApplication.shared
+    let urlSchema = "tel:"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
@@ -30,7 +32,13 @@ class RequestDetailVC: UIViewController {
     }
     
     @IBAction func callBtnPressed(_ sender: Any) {
-        
+        guard let phoneURL = URL(string: "\(urlSchema)\(postForm!.phone)")
+            else {return}
+        if application.canOpenURL(phoneURL) {
+            application.open(phoneURL, options: [:], completionHandler: nil)
+        }else{
+            simpleAlert(title: "Phone Number Not Avail.", msg: "Cannot Call Requester")
+        }
     }
     
     

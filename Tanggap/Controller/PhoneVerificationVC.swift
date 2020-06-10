@@ -22,7 +22,7 @@ class PhoneVerificationVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.hideKeyboardWhenTappedAround()
     }
 
     @IBAction func sendOtpBtnPressed(_ sender: Any) {
@@ -82,8 +82,6 @@ class PhoneVerificationVC: UIViewController {
             self.goToOtpScreen()
         })
     }
-    
-    
         
     @objc func goToOtpScreen(){
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -99,4 +97,16 @@ class PhoneVerificationVC: UIViewController {
         self.present(storyboard, animated: true, completion: nil)
     }
     
+}
+
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
 }

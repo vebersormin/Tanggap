@@ -11,6 +11,7 @@ import UIKit
 
 struct Const {
     struct FStore {
+        static var userId = "id"
         static let nameField = "name"
         static let emailField = "email"
         static let newPhoneField = "newPhoneNumber"

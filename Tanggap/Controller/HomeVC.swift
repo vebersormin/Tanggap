@@ -37,17 +37,18 @@ class HomeVC: UIViewController {
                 if let snapshotDocuments = querySnapshot?.documents{
                     for doc in snapshotDocuments {
                         let data = doc.data()
-                        if let requesterName = data["name"] as? String,
+                        if let requesterId = data["id"] as? String,
+                        let requesterName = data["name"] as? String,
                         let requesterDesc = data["desc"] as? String,
                         let requesterAddr = data["addr"] as? String,
                         let requesterPhone = data["phone"] as? String,
                         let amountOfQty = data["qty"] as? Int,
                         let timeStamp = data["time"] as? Timestamp {
                             
-                            let newRequest = userDetail(name: requesterName, desc: requesterDesc, addr: requesterAddr, phone: requesterPhone, qty: amountOfQty, time: timeStamp)
+                            let newRequest = userDetail(id: requesterId, name: requesterName, desc: requesterDesc, addr: requesterAddr, phone: requesterPhone, qty: amountOfQty, time: timeStamp)
                             
                             self.feedArr.append(newRequest)
-                            
+                            print("\(doc.documentID)")
                             DispatchQueue.main.async {
                                 self.theTableView.reloadData()
                             }
@@ -78,6 +79,7 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
         if let cell = theTableView.dequeueReusableCell(withIdentifier: "DetailCell", for: indexPath) as? DetailCell {
             
             cell.configCell(configUserDetail: feedArr[indexPath.row])
+            
             return cell
         }
         return UITableViewCell()

@@ -11,6 +11,7 @@ import Firebase
 
 
 struct userDetail {
+    var id: String
     var name: String
     var desc: String
     var addr: String

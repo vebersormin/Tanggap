@@ -61,16 +61,28 @@ class RequestFormVC: UIViewController {
     }
     
     func uploadDocs(){
-        db.collection("userDetail").addDocument(data: ["name" : requesterName
-        , "addr" : requesterAddr
-        , "phone" : requesterPhoneNum
-        , "desc" : requesterDesc
-        , "qty" : qtyAmount
-        , "time" : Timestamp()]) { (error) in
+        let opportunityCollection = db.collection("userDetail")
+        let newDocumentID = UUID().uuidString
+        let opportunityDocument = opportunityCollection.document(newDocumentID)
+        let passName = requesterName
+        let passAddr = requesterAddr
+        let passPhone = requesterPhoneNum
+        let passDesc = requesterDesc
+        let passQty = qtyAmount
                 
-            if let e = error {
-                self.simpleAlert(title: "Error", msg: "\(e)")
-            }else {
+        let data: [String: Any] = ["id": newDocumentID,
+                                   "name": passName,
+                                   "addr": passAddr,
+                                   "phone": passPhone,
+                                   "desc": passDesc,
+                                   "qty": passQty,
+                                   "time": Timestamp()]
+        
+        opportunityDocument.setData(data) { (error) in
+            if let error = error {
+                self.simpleAlert(title: "Error", msg: "\(error)")
+            } else {
+                print("Data Saved")
                 self.toFinishScreen()
             }
         }

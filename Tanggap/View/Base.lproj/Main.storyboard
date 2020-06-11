@@ -16,10 +16,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0.1 - Sign In Screen" translatesAutoresizingMaskIntoConstraints="NO" id="mKD-jn-wCL">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896.00000000000182"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="uTM-Jg-uaN">
-                                <rect key="frame" x="20" y="158" width="374" height="321.5"/>
+                                <rect key="frame" x="20" y="158" width="374" height="453.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AKSI!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fac-lG-6D5">
                                         <rect key="frame" x="146.5" y="0.0" width="81.5" height="41.5"/>
@@ -34,20 +34,20 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mpx-Kw-8SU" userLabel="Signin">
-                                        <rect key="frame" x="16.5" y="119" width="341" height="66"/>
+                                        <rect key="frame" x="0.0" y="119" width="374" height="132"/>
                                         <state key="normal" image="0.15 - Login Button"/>
                                         <connections>
                                             <segue destination="Nb6-NK-2ff" kind="show" id="Oqd-dW-WrY"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gPL-w4-rub">
-                                        <rect key="frame" x="175.5" y="210" width="23.5" height="20.5"/>
+                                        <rect key="frame" x="175.5" y="276" width="23.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2SM-OF-Kxg" userLabel="Register">
-                                        <rect key="frame" x="16.5" y="255.5" width="341" height="66"/>
+                                        <rect key="frame" x="0.0" y="321.5" width="374" height="132"/>
                                         <state key="normal" image="0.14 - Register New Button"/>
                                         <connections>
                                             <segue destination="Du1-nB-pIE" kind="show" id="TMC-pC-ry5"/>
@@ -95,7 +95,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="414" height="500"/>
                                                     </imageView>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pop BG-2" translatesAutoresizingMaskIntoConstraints="NO" id="Qmw-o2-uig">
-                                                        <rect key="frame" x="0.0" y="300" width="414" height="200.00000000000023"/>
+                                                        <rect key="frame" x="0.0" y="300" width="414" height="200"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="200" id="SQp-kB-U2R"/>
                                                         </constraints>
@@ -183,7 +183,7 @@
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D8N-fo-xH0">
-                                                        <rect key="frame" x="0.0" y="236" width="414" height="56"/>
+                                                        <rect key="frame" x="0.0" y="180" width="414" height="112"/>
                                                         <state key="normal" image="0.16 - RegisterToHomeButton"/>
                                                         <connections>
                                                             <action selector="registerBtnPressed:" destination="Du1-nB-pIE" eventType="touchUpInside" id="mce-BE-NSV"/>
@@ -276,7 +276,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="414" height="500"/>
                                                     </imageView>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pop BG-2" translatesAutoresizingMaskIntoConstraints="NO" id="5hC-xJ-4AD">
-                                                        <rect key="frame" x="0.0" y="300" width="414" height="200.00000000000023"/>
+                                                        <rect key="frame" x="0.0" y="300" width="414" height="200"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="200" id="adH-zt-SvN"/>
                                                         </constraints>
@@ -328,7 +328,7 @@
                                                 <rect key="frame" x="0.0" y="500" width="414" height="250"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jrz-bt-I4m">
-                                                        <rect key="frame" x="0.0" y="184" width="414" height="56"/>
+                                                        <rect key="frame" x="0.0" y="128" width="414" height="112"/>
                                                         <state key="normal" image="0.18 - Send OTP Button"/>
                                                         <connections>
                                                             <action selector="sendOtpBtnPressed:" destination="Nb6-NK-2ff" eventType="touchUpInside" id="0uR-n1-YXR"/>
@@ -425,7 +425,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="414" height="600"/>
                                                     </imageView>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pop BG-2" translatesAutoresizingMaskIntoConstraints="NO" id="KQU-j7-8XS">
-                                                        <rect key="frame" x="0.0" y="400" width="414" height="200.00000000000023"/>
+                                                        <rect key="frame" x="0.0" y="400" width="414" height="200"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="200" id="1em-gp-Y5b"/>
                                                         </constraints>
@@ -465,7 +465,7 @@
                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="go"/>
                                                     </textField>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aek-wi-gJI">
-                                                        <rect key="frame" x="35.5" y="140" width="343" height="55"/>
+                                                        <rect key="frame" x="-136" y="140" width="686" height="55"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="55" id="w0i-9t-Ced"/>
                                                         </constraints>
@@ -743,11 +743,82 @@
                         <outlet property="addressTextField" destination="nPL-gh-OLq" id="TRb-MH-qLq"/>
                         <outlet property="descBoxTextField" destination="ccj-xU-Nlt" id="gkR-lH-FbK"/>
                         <outlet property="nameTextField" destination="Hm1-1y-V4J" id="RXG-Qg-GWM"/>
+                        <segue destination="o64-vi-Tt0" kind="show" identifier="toCheckoutSegue" id="Dea-fm-g7G"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2qc-tP-YUr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="7453.6231884057979" y="559.82142857142856"/>
+        </scene>
+        <!--CheckoutVC-->
+        <scene sceneID="Qim-yr-Kpp">
+            <objects>
+                <viewController storyboardIdentifier="toCheckoutStoryboard" id="o64-vi-Tt0" customClass="CheckoutVC" customModule="Tanggap" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gid-hi-iJF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EKj-37-dHL">
+                                <rect key="frame" x="10" y="118" width="394" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7fu-j3-PaQ">
+                                <rect key="frame" x="178.5" y="433" width="57" height="30"/>
+                                <state key="normal" title="UPDATE"/>
+                                <connections>
+                                    <action selector="updateBtnPressed:" destination="o64-vi-Tt0" eventType="touchUpInside" id="Pdj-Lp-mRe"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QTY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hxA-jw-RYC">
+                                <rect key="frame" x="10" y="148.5" width="33.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="72N-zd-uLV">
+                                <rect key="frame" x="10" y="179.5" width="52" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="52" id="fNw-Aj-bJk"/>
+                                    <constraint firstAttribute="height" constant="54" id="hsC-bd-Tqr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RNC-GL-caC">
+                                <rect key="frame" x="186" y="188.5" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="RNC-GL-caC" firstAttribute="top" secondItem="EKj-37-dHL" secondAttribute="bottom" constant="50" id="0Tq-o9-RmC"/>
+                            <constraint firstItem="EKj-37-dHL" firstAttribute="leading" secondItem="NVi-Bz-LRM" secondAttribute="leading" constant="10" id="12I-Oc-jjS"/>
+                            <constraint firstItem="NVi-Bz-LRM" firstAttribute="trailing" secondItem="EKj-37-dHL" secondAttribute="trailing" constant="10" id="5cL-G1-NpF"/>
+                            <constraint firstItem="hxA-jw-RYC" firstAttribute="top" secondItem="EKj-37-dHL" secondAttribute="bottom" constant="10" id="Fja-0o-94i"/>
+                            <constraint firstItem="7fu-j3-PaQ" firstAttribute="centerX" secondItem="gid-hi-iJF" secondAttribute="centerX" id="MG6-Wy-VF1"/>
+                            <constraint firstItem="EKj-37-dHL" firstAttribute="top" secondItem="NVi-Bz-LRM" secondAttribute="top" constant="30" id="VHg-bB-ISZ"/>
+                            <constraint firstItem="RNC-GL-caC" firstAttribute="centerX" secondItem="gid-hi-iJF" secondAttribute="centerX" id="VLJ-JO-cOc"/>
+                            <constraint firstItem="72N-zd-uLV" firstAttribute="top" secondItem="hxA-jw-RYC" secondAttribute="bottom" constant="10" id="ZMK-Cv-Utp"/>
+                            <constraint firstItem="hxA-jw-RYC" firstAttribute="leading" secondItem="NVi-Bz-LRM" secondAttribute="leading" constant="10" id="fa8-Fe-H9c"/>
+                            <constraint firstItem="72N-zd-uLV" firstAttribute="leading" secondItem="NVi-Bz-LRM" secondAttribute="leading" constant="10" id="kZc-eX-fyo"/>
+                            <constraint firstItem="7fu-j3-PaQ" firstAttribute="centerY" secondItem="gid-hi-iJF" secondAttribute="centerY" id="rQc-QF-OaG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="NVi-Bz-LRM"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="alH-rO-QOo"/>
+                    <connections>
+                        <outlet property="nameTextLabel" destination="EKj-37-dHL" id="68f-s6-rGs"/>
+                        <outlet property="qtyTextField" destination="72N-zd-uLV" id="MxA-II-pwZ"/>
+                        <outlet property="qtyTextLabel" destination="RNC-GL-caC" id="Ek3-V9-Ngv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VSq-Ps-ZqO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8508.6956521739139" y="559.82142857142856"/>
         </scene>
         <!--Settings-->
         <scene sceneID="IdD-VK-gqi">

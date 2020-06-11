@@ -27,6 +27,7 @@
 		823986EB2489378C00B060D3 /* DetailUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823986EA2489378C00B060D3 /* DetailUser.swift */; };
 		826F93B6248F3F4A00318AC1 /* FinishScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826F93B5248F3F4A00318AC1 /* FinishScreenVC.swift */; };
 		826F93B8248F6F3600318AC1 /* RequestDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826F93B7248F6F3600318AC1 /* RequestDetailVC.swift */; };
+		82CCB8B22490A9FE00D7E8B8 /* CheckoutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CCB8B12490A9FE00D7E8B8 /* CheckoutVC.swift */; };
 		82CDA961248DF11E00A7F630 /* RoundedViewClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CDA960248DF11E00A7F630 /* RoundedViewClass.swift */; };
 		87152C0CAC457D544A19D7FB /* Pods_Tanggap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D3E86AE8F5A0FABC34C0980 /* Pods_Tanggap.framework */; };
 /* End PBXBuildFile section */
@@ -56,6 +57,7 @@
 		823986EA2489378C00B060D3 /* DetailUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailUser.swift; sourceTree = "<group>"; };
 		826F93B5248F3F4A00318AC1 /* FinishScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishScreenVC.swift; sourceTree = "<group>"; };
 		826F93B7248F6F3600318AC1 /* RequestDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestDetailVC.swift; sourceTree = "<group>"; };
+		82CCB8B12490A9FE00D7E8B8 /* CheckoutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutVC.swift; sourceTree = "<group>"; };
 		82CDA960248DF11E00A7F630 /* RoundedViewClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedViewClass.swift; sourceTree = "<group>"; };
 		E7AB71E65E487FCF0F4E58D0 /* Pods-Tanggap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tanggap.debug.xcconfig"; path = "Target Support Files/Pods-Tanggap/Pods-Tanggap.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -127,6 +129,7 @@
 				821BF5DF248E241600818D01 /* RequestFormVC.swift */,
 				826F93B5248F3F4A00318AC1 /* FinishScreenVC.swift */,
 				826F93B7248F6F3600318AC1 /* RequestDetailVC.swift */,
+				82CCB8B12490A9FE00D7E8B8 /* CheckoutVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 				82CDA961248DF11E00A7F630 /* RoundedViewClass.swift in Sources */,
 				821BF5E0248E241600818D01 /* RequestFormVC.swift in Sources */,
 				826F93B8248F6F3600318AC1 /* RequestDetailVC.swift in Sources */,
+				82CCB8B22490A9FE00D7E8B8 /* CheckoutVC.swift in Sources */,
 				8209D4992489337E002FAA85 /* AppDelegate.swift in Sources */,
 				826F93B6248F3F4A00318AC1 /* FinishScreenVC.swift in Sources */,
 				82237C452489F40400075817 /* Extension.swift in Sources */,

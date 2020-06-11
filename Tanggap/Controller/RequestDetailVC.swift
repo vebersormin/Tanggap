@@ -16,6 +16,11 @@ class RequestDetailVC: UIViewController {
     @IBOutlet weak var QtyTextField: UITextField!
     
     var postForm: userDetail?
+    var nameText = ""
+    var addressText = ""
+    var descBoxText = ""
+    var phoneText = ""
+    var qtyText = 0
     let application = UIApplication.shared
     let urlSchema = "tel:"
     
@@ -43,6 +48,23 @@ class RequestDetailVC: UIViewController {
     
     
     @IBAction func donateNowBtnPressed(_ sender: Any) {
+        self.nameText = nameTextField.text!
+        self.addressText = postForm!.addr
+        self.descBoxText = postForm!.desc
+        self.phoneText = postForm!.phone
+        self.qtyText = Int(QtyTextField.text!)!
+        performSegue(withIdentifier: "toCheckoutSegue", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toCheckoutSegue" {
+            let destVC = segue.destination as! CheckoutVC
+            destVC.requesterName = self.nameText
+            destVC.requesterAddr = self.addressText
+            destVC.requesterDesc = self.descBoxText
+            destVC.requesterPhoneNum = self.phoneText
+            destVC.amountOfQtyGiven = self.qtyText
+        }
         
     }
     

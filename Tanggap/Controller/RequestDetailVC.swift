@@ -15,12 +15,15 @@ class RequestDetailVC: UIViewController {
     @IBOutlet weak var descBoxTextField: UITextView!
     @IBOutlet weak var QtyTextField: UITextField!
     
-    var postForm: userDetail?
+    var postForm: requesterDetail?
+    var idText = ""
     var nameText = ""
+    var authPhoneText = ""
     var addressText = ""
     var descBoxText = ""
     var phoneText = ""
     var qtyText = 0
+    
     let application = UIApplication.shared
     let urlSchema = "tel:"
     
@@ -48,7 +51,10 @@ class RequestDetailVC: UIViewController {
     
     
     @IBAction func donateNowBtnPressed(_ sender: Any) {
+        //set data to passed in func prepare for segue
         self.nameText = nameTextField.text!
+        self.idText = postForm!.id
+        self.authPhoneText = postForm!.authPhone
         self.addressText = postForm!.addr
         self.descBoxText = postForm!.desc
         self.phoneText = postForm!.phone
@@ -60,10 +66,12 @@ class RequestDetailVC: UIViewController {
         if segue.identifier == "toCheckoutSegue" {
             let destVC = segue.destination as! CheckoutVC
             destVC.requesterName = self.nameText
+            destVC.requesterId = self.idText
+            destVC.requesterPhoneAuth = self.authPhoneText
             destVC.requesterAddr = self.addressText
             destVC.requesterDesc = self.descBoxText
             destVC.requesterPhoneNum = self.phoneText
-            destVC.amountOfQtyGiven = self.qtyText
+            destVC.amountOfQtyNeeded = self.qtyText
         }
         
     }

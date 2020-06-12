@@ -26,7 +26,7 @@ class DetailCell: UITableViewCell {
     }
     
     
-    func configCell(configUserDetail: userDetail){
+    func configCell(configUserDetail: requesterDetail){
         nameTextField.text = configUserDetail.name
         addrTextField.text = configUserDetail.addr
         descTextField.text = configUserDetail.desc

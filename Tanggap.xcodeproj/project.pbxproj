@@ -24,9 +24,11 @@
 		82237C4D248A2F9700075817 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82237C4C248A2F9700075817 /* HomeVC.swift */; };
 		823986E82489369200B060D3 /* DetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823986E62489369200B060D3 /* DetailCell.swift */; };
 		823986E92489369200B060D3 /* DetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 823986E72489369200B060D3 /* DetailCell.xib */; };
-		823986EB2489378C00B060D3 /* DetailUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823986EA2489378C00B060D3 /* DetailUser.swift */; };
+		823986EB2489378C00B060D3 /* RequesterDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823986EA2489378C00B060D3 /* RequesterDetail.swift */; };
 		826F93B6248F3F4A00318AC1 /* FinishScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826F93B5248F3F4A00318AC1 /* FinishScreenVC.swift */; };
 		826F93B8248F6F3600318AC1 /* RequestDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826F93B7248F6F3600318AC1 /* RequestDetailVC.swift */; };
+		82C2454824932AA500914741 /* DonorDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C2454724932AA500914741 /* DonorDetail.swift */; };
+		82C2454A2493434000914741 /* FinishDonateScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C245492493434000914741 /* FinishDonateScreenVC.swift */; };
 		82CCB8B22490A9FE00D7E8B8 /* CheckoutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CCB8B12490A9FE00D7E8B8 /* CheckoutVC.swift */; };
 		82CDA961248DF11E00A7F630 /* RoundedViewClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CDA960248DF11E00A7F630 /* RoundedViewClass.swift */; };
 		87152C0CAC457D544A19D7FB /* Pods_Tanggap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D3E86AE8F5A0FABC34C0980 /* Pods_Tanggap.framework */; };
@@ -54,9 +56,11 @@
 		82237C4C248A2F9700075817 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		823986E62489369200B060D3 /* DetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCell.swift; sourceTree = "<group>"; };
 		823986E72489369200B060D3 /* DetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailCell.xib; sourceTree = "<group>"; };
-		823986EA2489378C00B060D3 /* DetailUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailUser.swift; sourceTree = "<group>"; };
+		823986EA2489378C00B060D3 /* RequesterDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequesterDetail.swift; sourceTree = "<group>"; };
 		826F93B5248F3F4A00318AC1 /* FinishScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishScreenVC.swift; sourceTree = "<group>"; };
 		826F93B7248F6F3600318AC1 /* RequestDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestDetailVC.swift; sourceTree = "<group>"; };
+		82C2454724932AA500914741 /* DonorDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonorDetail.swift; sourceTree = "<group>"; };
+		82C245492493434000914741 /* FinishDonateScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishDonateScreenVC.swift; sourceTree = "<group>"; };
 		82CCB8B12490A9FE00D7E8B8 /* CheckoutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutVC.swift; sourceTree = "<group>"; };
 		82CDA960248DF11E00A7F630 /* RoundedViewClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedViewClass.swift; sourceTree = "<group>"; };
 		E7AB71E65E487FCF0F4E58D0 /* Pods-Tanggap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tanggap.debug.xcconfig"; path = "Target Support Files/Pods-Tanggap/Pods-Tanggap.debug.xcconfig"; sourceTree = "<group>"; };
@@ -130,6 +134,7 @@
 				826F93B5248F3F4A00318AC1 /* FinishScreenVC.swift */,
 				826F93B7248F6F3600318AC1 /* RequestDetailVC.swift */,
 				82CCB8B12490A9FE00D7E8B8 /* CheckoutVC.swift */,
+				82C245492493434000914741 /* FinishDonateScreenVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -148,9 +153,10 @@
 			isa = PBXGroup;
 			children = (
 				82237C442489F40400075817 /* Extension.swift */,
-				823986EA2489378C00B060D3 /* DetailUser.swift */,
+				823986EA2489378C00B060D3 /* RequesterDetail.swift */,
 				82237C48248A09B000075817 /* RegisterUser.swift */,
 				82237C4A248A0F2800075817 /* Constant.swift */,
+				82C2454724932AA500914741 /* DonorDetail.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -317,6 +323,7 @@
 				82237C47248A040900075817 /* PhoneRegisterVC.swift in Sources */,
 				82237C49248A09B000075817 /* RegisterUser.swift in Sources */,
 				8209D49D2489337E002FAA85 /* ViewController.swift in Sources */,
+				82C2454824932AA500914741 /* DonorDetail.swift in Sources */,
 				82CDA961248DF11E00A7F630 /* RoundedViewClass.swift in Sources */,
 				821BF5E0248E241600818D01 /* RequestFormVC.swift in Sources */,
 				826F93B8248F6F3600318AC1 /* RequestDetailVC.swift in Sources */,
@@ -325,10 +332,11 @@
 				826F93B6248F3F4A00318AC1 /* FinishScreenVC.swift in Sources */,
 				82237C452489F40400075817 /* Extension.swift in Sources */,
 				82237C432489F0B800075817 /* PhoneVerificationVC.swift in Sources */,
-				823986EB2489378C00B060D3 /* DetailUser.swift in Sources */,
+				823986EB2489378C00B060D3 /* RequesterDetail.swift in Sources */,
 				82237C4B248A0F2800075817 /* Constant.swift in Sources */,
 				823986E82489369200B060D3 /* DetailCell.swift in Sources */,
 				82237C4D248A2F9700075817 /* HomeVC.swift in Sources */,
+				82C2454A2493434000914741 /* FinishDonateScreenVC.swift in Sources */,
 				8209D49B2489337E002FAA85 /* SceneDelegate.swift in Sources */,
 				821BF5DE248E0CE800818D01 /* MainVC.swift in Sources */,
 			);

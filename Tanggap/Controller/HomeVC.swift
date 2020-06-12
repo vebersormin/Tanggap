@@ -15,7 +15,7 @@ class HomeVC: UIViewController {
     @IBOutlet weak var theTableView: UITableView!
     
     let db = Firestore.firestore()
-    var feedArr: [userDetail] = []
+    var feedArr: [requesterDetail] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +28,8 @@ class HomeVC: UIViewController {
     }
     
     func fetchDocumentFB(){
-        db.collection("userDetail").order(by: "name").addSnapshotListener { (querySnapshot, error) in
+        //Only Fetch Doc From FB. Not Shown.
+        db.collection("requesterDetail").order(by: "name").addSnapshotListener { (querySnapshot, error) in
             self.feedArr = []
             
             if let e = error {
@@ -39,13 +40,14 @@ class HomeVC: UIViewController {
                         let data = doc.data()
                         if let requesterId = data["id"] as? String,
                         let requesterName = data["name"] as? String,
+                        let requesterAuthPhone = data["authPhone"] as? String,
                         let requesterDesc = data["desc"] as? String,
                         let requesterAddr = data["addr"] as? String,
                         let requesterPhone = data["phone"] as? String,
                         let amountOfQty = data["qty"] as? Int,
                         let timeStamp = data["time"] as? Timestamp {
                             
-                            let newRequest = userDetail(id: requesterId, name: requesterName, desc: requesterDesc, addr: requesterAddr, phone: requesterPhone, qty: amountOfQty, time: timeStamp)
+                            let newRequest = requesterDetail(id: requesterId, name: requesterName, authPhone: requesterAuthPhone, desc: requesterDesc, addr: requesterAddr, phone: requesterPhone, qty: amountOfQty, time: timeStamp)
                             
                             self.feedArr.append(newRequest)
                             print("\(doc.documentID)")
@@ -63,7 +65,7 @@ class HomeVC: UIViewController {
         
         if segue.identifier == "toRequestDetailSegue" {
             let destVC = segue.destination as! RequestDetailVC
-            destVC.postForm = sender as? userDetail
+            destVC.postForm = sender as? requesterDetail
         }
     }
 }

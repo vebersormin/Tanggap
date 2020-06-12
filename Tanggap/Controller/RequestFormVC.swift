@@ -61,8 +61,9 @@ class RequestFormVC: UIViewController {
     }
     
     func uploadDocs(){
-        let opportunityCollection = db.collection("userDetail")
+        let opportunityCollection = db.collection("requesterDetail")
         let newDocumentID = UUID().uuidString
+        let passAuthPhone = Const.FStore.requesterAuthNum!
         let opportunityDocument = opportunityCollection.document(newDocumentID)
         let passName = requesterName
         let passAddr = requesterAddr
@@ -72,6 +73,7 @@ class RequestFormVC: UIViewController {
                 
         let data: [String: Any] = ["id": newDocumentID,
                                    "name": passName,
+                                   "authPhone": passAuthPhone,
                                    "addr": passAddr,
                                    "phone": passPhone,
                                    "desc": passDesc,

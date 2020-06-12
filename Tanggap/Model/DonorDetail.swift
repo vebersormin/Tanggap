@@ -1,21 +1,19 @@
 //
-//  DetailUser.swift
+//  donorDetail.swift
 //  Tanggap
 //
-//  Created by Veber on 04/06/20.
+//  Created by Veber on 12/06/20.
 //  Copyright © 2020 Veber. All rights reserved.
 //
 
 import Foundation
 import Firebase
 
-
-struct userDetail {
+struct donorDetail {
     var id: String
+    var forWho: String
     var name: String
-    var desc: String
-    var addr: String
-    var phone: String
-    var qty: Int
+    var linkDonation: String
+    var donationGiven: Int
     var time: Timestamp
 }

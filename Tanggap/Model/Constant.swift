@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Firebase
 
 struct Const {
     struct FStore {
@@ -15,6 +16,7 @@ struct Const {
         static let nameField = "name"
         static let emailField = "email"
         static let newPhoneField = "newPhoneNumber"
+        static let requesterAuthNum = Auth.auth().currentUser?.phoneNumber
     }
     
     struct AppColor {

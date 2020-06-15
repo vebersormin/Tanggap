@@ -27,14 +27,22 @@ class CheckoutVC: UIViewController {
     @IBOutlet weak var senderGojekTextField: UITextField!
     @IBOutlet weak var trackingGoSendTextField: UITextField!
     @IBOutlet weak var amountGosendTextField: UITextField!
+    
     @IBOutlet weak var senderGrabTextField: UITextField!
     @IBOutlet weak var trackingGrabTextField: UITextField!
     @IBOutlet weak var amountGrabTextField: UITextField!
+
+    @IBOutlet weak var transferProofTextField: UITextField!
+    @IBOutlet weak var senderTransferTextField: UITextField!
+    @IBOutlet weak var amountDonationTextField: UITextField!
     
-    //variable for Gosend
+    
+    
+    //variable for Sender Info
     var sender = ""
     var track = ""
     var amount = 0
+    var theDonationMethod = "Untuk Alternative"
     let database = Firestore.firestore()
     
     
@@ -44,21 +52,29 @@ class CheckoutVC: UIViewController {
 
     
     @IBAction func confirmGosendBtnPressed(_ sender: Any) {
-        editAmountOfQty(amount: amountGosendTextField)
-        uploadDonorDocsToFB(sender: senderGojekTextField, tracker: trackingGoSendTextField, amountQty: amountGosendTextField)
+        editAmountOfQtyGosend(amount: amountGosendTextField)
     }
     
     
     @IBAction func confirmGrabBtnPressed(_ sender: Any) {
-        editAmountOfQty(amount: amountGrabTextField)
+        editAmountOfQtyGrab(amount: amountGrabTextField)
     }
     
-    func editAmountOfQty(amount: UITextField){
+    
+    @IBAction func confirmTransferBtnPressed(_ sender: Any) {
+        editAmountOfQtyTransfer(amount: amountDonationTextField)
+    }
+    
+    
+    
+    func editAmountOfQtyGrab(amount: UITextField){
         
         let amountOfQtyInput = amount.text!
         let amountOfQtyInt = Int(amountOfQtyInput)!
         let newAmountOfQty = amountOfQtyNeeded - amountOfQtyInt
-        
+        let DonationMethod = "Grab Express"
+        theDonationMethod = DonationMethod
+                
         if newAmountOfQty < 0 {
             simpleAlert(title: "The amount of donation is too much", msg: "Please donate not more than \(amountOfQtyNeeded)")
         }
@@ -69,18 +85,69 @@ class CheckoutVC: UIViewController {
                     if let err = err {
                         print("Error updating document: \(err)")
                     } else {
-                        self.uploadDonorDocsToFB(sender: self.senderGrabTextField, tracker: self.trackingGrabTextField, amountQty: self.amountGrabTextField)
+                        self.uploadDonorDocsToFB(sender: self.senderGrabTextField, tracker: self.trackingGrabTextField, amountQty: self.amountGrabTextField, method: self.theDonationMethod)
                         print("Document successfully updated")
                     }
             }
         }
     }
     
-    func uploadDonorDocsToFB(sender: UITextField, tracker: UITextField, amountQty: UITextField){
+    func editAmountOfQtyGosend(amount: UITextField){
+        
+        let amountOfQtyInput = amount.text!
+        let amountOfQtyInt = Int(amountOfQtyInput)!
+        let newAmountOfQty = amountOfQtyNeeded - amountOfQtyInt
+        let DonationMethod = "Gosend"
+        theDonationMethod = DonationMethod
+        
+        if newAmountOfQty < 0 {
+            simpleAlert(title: "The amount of donation is too much", msg: "Please donate not more than \(amountOfQtyNeeded)")
+        }
+        else{
+            db.document(requesterId).updateData([
+                "qty" : newAmountOfQty,
+            ]) { (err) in
+                if let err = err {
+                    print("Error updating document: \(err)")
+                } else {
+                    self.uploadDonorDocsToFB(sender: self.senderGojekTextField, tracker: self.trackingGoSendTextField, amountQty: self.amountGosendTextField, method: self.theDonationMethod)
+                    print("Document successfully updated")
+                }
+            }
+        }
+        
+    }
+    
+    func editAmountOfQtyTransfer(amount: UITextField){
+        
+        let amountOfQtyInput = amount.text!
+        let amountOfQtyInt = Int(amountOfQtyInput)!
+        let newAmountOfQty = amountOfQtyNeeded - amountOfQtyInt
+        let DonationMethod = "Transfer"
+        theDonationMethod = DonationMethod
+        
+        if newAmountOfQty < 0 {
+            simpleAlert(title: "The amount of donation is too much", msg: "Please donate not more than \(amountOfQtyNeeded)")
+        }
+        else{
+            db.document(requesterId).updateData(["qty" : newAmountOfQty]) { (err) in
+                if let err = err {
+                    print("Error updating document: \(err)")
+                } else {
+                    self.uploadDonorDocsToFB(sender: self.senderTransferTextField, tracker: self.transferProofTextField, amountQty: self.amountDonationTextField, method: self.theDonationMethod)
+                    print("Document successfully updated")
+                }
+            }
+        }
+        
+    }
+    
+    func uploadDonorDocsToFB(sender: UITextField, tracker: UITextField, amountQty: UITextField, method: String){
         
         let amountOfQtyInput = amountQty.text!
         let amountOfQtyInt = Int(amountOfQtyInput)!
         let newAmountOfQty = amountOfQtyNeeded - amountOfQtyInt
+        let methodUse = method
         
         guard let sender = sender.text, sender.isNotEmpty,
             let trackLink = tracker.text, trackLink.isNotEmpty,
@@ -93,6 +160,7 @@ class CheckoutVC: UIViewController {
         self.sender = sender
         self.track = trackLink
         self.amount = amount
+        self.theDonationMethod = methodUse
         
         if newAmountOfQty == 0{
             uploadDonorDocs()
@@ -106,13 +174,17 @@ class CheckoutVC: UIViewController {
         let collection = database.collection("donorDetail")
         let newDocsId = UUID().uuidString
         let collectionDocument = collection.document(newDocsId)
+        let passRequestFormOf = requesterDesc
         let passForWho = requesterPhoneAuth
+        let passDonationMethod = theDonationMethod
         let passName = sender
         let passLink = track
         let passDonationQty = amount
         
         let data: [String: Any] = ["id": newDocsId,
                                    "forWho": passForWho,
+                                   "requestFormOf": passRequestFormOf,
+                                   "typeOfDonationMethod": passDonationMethod,
                                    "name": passName,
                                    "linkDonation": passLink,
                                    "donationGiven": passDonationQty,

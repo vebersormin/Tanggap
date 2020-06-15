@@ -76,6 +76,7 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
         return feedArr.count
     }
     
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if let cell = theTableView.dequeueReusableCell(withIdentifier: "DetailCell", for: indexPath) as? DetailCell {
@@ -87,6 +88,7 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
         return UITableViewCell()
         
     }
+    
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         

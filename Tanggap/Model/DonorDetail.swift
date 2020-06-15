@@ -13,6 +13,8 @@ import Firebase
 struct donorDetail {
     var id: String
     var forWho: String
+    var typeOfDonationMethod: String
+    var requestFormOf: String
     var name: String
     var linkDonation: String
     var donationGiven: Int

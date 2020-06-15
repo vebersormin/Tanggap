@@ -14,6 +14,7 @@ class PhoneVerificationVC: UIViewController {
     
     @IBOutlet weak var phoneNumberTextField: UITextField!
     @IBOutlet weak var otpCodeTextField: UITextField!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     let db = Firestore.firestore()
     let userDefault = UserDefaults.standard

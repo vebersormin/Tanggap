@@ -16,10 +16,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0.1 - Sign In Screen" translatesAutoresizingMaskIntoConstraints="NO" id="mKD-jn-wCL">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896.00000000000182"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="uTM-Jg-uaN">
-                                <rect key="frame" x="20" y="158" width="374" height="453.5"/>
+                                <rect key="frame" x="20" y="158" width="374" height="321.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AKSI!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fac-lG-6D5">
                                         <rect key="frame" x="146.5" y="0.0" width="81.5" height="41.5"/>
@@ -34,20 +34,20 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mpx-Kw-8SU" userLabel="Signin">
-                                        <rect key="frame" x="0.0" y="119" width="374" height="132"/>
+                                        <rect key="frame" x="16.5" y="119" width="341" height="66"/>
                                         <state key="normal" image="0.15 - Login Button"/>
                                         <connections>
                                             <segue destination="Nb6-NK-2ff" kind="show" id="Oqd-dW-WrY"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gPL-w4-rub">
-                                        <rect key="frame" x="175.5" y="276" width="23.5" height="20.5"/>
+                                        <rect key="frame" x="175.5" y="210" width="23.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2SM-OF-Kxg" userLabel="Register">
-                                        <rect key="frame" x="0.0" y="321.5" width="374" height="132"/>
+                                        <rect key="frame" x="16.5" y="255.5" width="341" height="66"/>
                                         <state key="normal" image="0.14 - Register New Button"/>
                                         <connections>
                                             <segue destination="Du1-nB-pIE" kind="show" id="TMC-pC-ry5"/>
@@ -95,7 +95,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="414" height="500"/>
                                                     </imageView>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pop BG-2" translatesAutoresizingMaskIntoConstraints="NO" id="Qmw-o2-uig">
-                                                        <rect key="frame" x="0.0" y="300" width="414" height="200"/>
+                                                        <rect key="frame" x="0.0" y="300" width="414" height="200.00000000000023"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="200" id="SQp-kB-U2R"/>
                                                         </constraints>
@@ -183,7 +183,7 @@
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D8N-fo-xH0">
-                                                        <rect key="frame" x="0.0" y="180" width="414" height="112"/>
+                                                        <rect key="frame" x="0.0" y="236" width="414" height="56"/>
                                                         <state key="normal" image="0.16 - RegisterToHomeButton"/>
                                                         <connections>
                                                             <action selector="registerBtnPressed:" destination="Du1-nB-pIE" eventType="touchUpInside" id="mce-BE-NSV"/>
@@ -276,7 +276,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="414" height="500"/>
                                                     </imageView>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pop BG-2" translatesAutoresizingMaskIntoConstraints="NO" id="5hC-xJ-4AD">
-                                                        <rect key="frame" x="0.0" y="300" width="414" height="200"/>
+                                                        <rect key="frame" x="0.0" y="300" width="414" height="200.00000000000023"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="200" id="adH-zt-SvN"/>
                                                         </constraints>
@@ -328,7 +328,7 @@
                                                 <rect key="frame" x="0.0" y="500" width="414" height="250"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jrz-bt-I4m">
-                                                        <rect key="frame" x="0.0" y="128" width="414" height="112"/>
+                                                        <rect key="frame" x="0.0" y="184" width="414" height="56"/>
                                                         <state key="normal" image="0.18 - Send OTP Button"/>
                                                         <connections>
                                                             <action selector="sendOtpBtnPressed:" destination="Nb6-NK-2ff" eventType="touchUpInside" id="0uR-n1-YXR"/>
@@ -354,12 +354,18 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
+                                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="FqR-4x-j0Y">
+                                                        <rect key="frame" x="188.5" y="27.5" width="37" height="37"/>
+                                                        <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </activityIndicatorView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
+                                                    <constraint firstItem="bMW-il-R5X" firstAttribute="top" secondItem="FqR-4x-j0Y" secondAttribute="bottom" constant="10" id="5pa-Un-ZCD"/>
                                                     <constraint firstItem="kUk-hB-5yd" firstAttribute="centerX" secondItem="aGN-o3-AJN" secondAttribute="centerX" id="B9K-YG-mja"/>
                                                     <constraint firstItem="bMW-il-R5X" firstAttribute="centerX" secondItem="aGN-o3-AJN" secondAttribute="centerX" id="FVV-Op-gf2"/>
                                                     <constraint firstAttribute="trailing" secondItem="Jrz-bt-I4m" secondAttribute="trailing" id="I5R-HK-iVM"/>
+                                                    <constraint firstItem="FqR-4x-j0Y" firstAttribute="centerX" secondItem="aGN-o3-AJN" secondAttribute="centerX" id="K6I-aF-nan"/>
                                                     <constraint firstAttribute="height" constant="250" id="SGb-3w-NSy"/>
                                                     <constraint firstItem="5SF-kZ-CEo" firstAttribute="leading" secondItem="aGN-o3-AJN" secondAttribute="leading" constant="50" id="V4B-Tz-v4K"/>
                                                     <constraint firstItem="5SF-kZ-CEo" firstAttribute="top" secondItem="aGN-o3-AJN" secondAttribute="top" id="WGt-JL-lWj"/>
@@ -396,6 +402,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="hdD-KL-kz5"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="FqR-4x-j0Y" id="Kfd-u9-3B9"/>
                         <outlet property="phoneNumberTextField" destination="kUk-hB-5yd" id="H0C-7M-dUh"/>
                         <segue destination="3fA-Ys-TFB" kind="show" identifier="toOtpSegue" id="VFW-BB-3pw"/>
                     </connections>
@@ -425,7 +432,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="414" height="600"/>
                                                     </imageView>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pop BG-2" translatesAutoresizingMaskIntoConstraints="NO" id="KQU-j7-8XS">
-                                                        <rect key="frame" x="0.0" y="400" width="414" height="200"/>
+                                                        <rect key="frame" x="0.0" y="400" width="414" height="200.00000000000023"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="200" id="1em-gp-Y5b"/>
                                                         </constraints>
@@ -465,7 +472,7 @@
                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="go"/>
                                                     </textField>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aek-wi-gJI">
-                                                        <rect key="frame" x="-136" y="140" width="686" height="55"/>
+                                                        <rect key="frame" x="35.5" y="140" width="343" height="55"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="55" id="w0i-9t-Ced"/>
                                                         </constraints>
@@ -531,13 +538,7 @@
         <!--Notification-->
         <scene sceneID="cTn-ah-hs5">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="bbn-fp-8av" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="PUp-i6-s8C">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="KZh-Hd-InE"/>
-                    </view>
+                <viewController modalPresentationStyle="fullScreen" id="bbn-fp-8av" customClass="NotificationVC" customModule="Tanggap" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Notification" image="archivebox" catalog="system" id="LD8-5D-FDO" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
                         <connections>
                             <outlet property="animation" destination="xqX-yx-Yww" id="8hG-rJ-g4g"/>
@@ -548,7 +549,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5VZ-Ty-cI5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <customObject id="xqX-yx-Yww" customClass="RAMBounceAnimation" customModule="RAMAnimatedTabBarController"/>
             </objects>
-            <point key="canvasLocation" x="5532" y="561"/>
+            <point key="canvasLocation" x="5531.884057971015" y="560.49107142857144"/>
         </scene>
         <!--HomeVC-->
         <scene sceneID="J20-Jg-2P6">
@@ -762,7 +763,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="NXH-7l-gqg">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1100"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1150"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ysL-eJ-gfG" customClass="RoundedShadowView" customModule="Tanggap" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="400"/>
@@ -933,10 +934,77 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GU3-me-jT2">
-                                                <rect key="frame" x="0.0" y="800" width="414" height="300"/>
-                                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <rect key="frame" x="0.0" y="800" width="414" height="350"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transfer / M-Banking" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gTJ-sd-APG">
+                                                        <rect key="frame" x="10" y="5" width="165" height="20.5"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                                        <color key="textColor" red="0.41176470590000003" green="0.47450980390000003" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="58j-8r-aIR">
+                                                        <rect key="frame" x="10" y="40.5" width="394" height="137"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Account Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L1k-6I-EUb">
+                                                                <rect key="frame" x="0.0" y="0.0" width="394" height="22.5"/>
+                                                                <fontDescription key="fontDescription" name="PingFangSC-Medium" family="PingFang SC" pointSize="16"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="3776032012" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kX8-7G-6W2">
+                                                                <rect key="frame" x="0.0" y="30.5" width="394" height="34"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sender Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bcM-Zk-ADd">
+                                                                <rect key="frame" x="0.0" y="72.5" width="394" height="22.5"/>
+                                                                <fontDescription key="fontDescription" name="PingFangSC-Medium" family="PingFang SC" pointSize="16"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Orang Baik" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ktS-P0-nN2">
+                                                                <rect key="frame" x="0.0" y="103" width="394" height="34"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="10" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nhf-YH-eLC">
+                                                        <rect key="frame" x="10" y="220" width="43.5" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount Of Donation Given" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4yQ-xE-Ulm">
+                                                        <rect key="frame" x="10" y="187.5" width="204" height="22.5"/>
+                                                        <fontDescription key="fontDescription" name="PingFangSC-Medium" family="PingFang SC" pointSize="16"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H9O-Gr-FDs">
+                                                        <rect key="frame" x="238" y="274" width="166" height="66"/>
+                                                        <state key="normal" image="0.26 - Confirm Donate Button"/>
+                                                        <connections>
+                                                            <action selector="confirmTransferBtnPressed:" destination="np2-zW-dvv" eventType="touchUpInside" id="ocv-SW-DiI"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="300" id="kDs-do-l01"/>
+                                                    <constraint firstItem="Nhf-YH-eLC" firstAttribute="leading" secondItem="GU3-me-jT2" secondAttribute="leading" constant="10" id="0pr-pz-5cd"/>
+                                                    <constraint firstAttribute="bottom" secondItem="H9O-Gr-FDs" secondAttribute="bottom" constant="10" id="58G-fa-diT"/>
+                                                    <constraint firstItem="58j-8r-aIR" firstAttribute="leading" secondItem="GU3-me-jT2" secondAttribute="leading" constant="10" id="AZB-A4-VkZ"/>
+                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="4yQ-xE-Ulm" secondAttribute="trailing" constant="20" symbolic="YES" id="DaH-wG-5KL"/>
+                                                    <constraint firstAttribute="trailing" secondItem="H9O-Gr-FDs" secondAttribute="trailing" constant="10" id="Hpc-4M-epv"/>
+                                                    <constraint firstItem="58j-8r-aIR" firstAttribute="top" secondItem="gTJ-sd-APG" secondAttribute="bottom" constant="15" id="Ii9-Wc-MGi"/>
+                                                    <constraint firstItem="4yQ-xE-Ulm" firstAttribute="top" secondItem="58j-8r-aIR" secondAttribute="bottom" constant="10" id="Ye1-sD-vUb"/>
+                                                    <constraint firstItem="gTJ-sd-APG" firstAttribute="top" secondItem="GU3-me-jT2" secondAttribute="top" constant="5" id="Ylg-BE-Fvv"/>
+                                                    <constraint firstItem="Nhf-YH-eLC" firstAttribute="top" secondItem="4yQ-xE-Ulm" secondAttribute="bottom" constant="10" id="b5N-L4-NYK"/>
+                                                    <constraint firstItem="gTJ-sd-APG" firstAttribute="leading" secondItem="GU3-me-jT2" secondAttribute="leading" constant="10" id="cLl-hV-uzq"/>
+                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Nhf-YH-eLC" secondAttribute="trailing" constant="20" symbolic="YES" id="jNU-jW-X2u"/>
+                                                    <constraint firstAttribute="height" constant="350" id="kDs-do-l01"/>
+                                                    <constraint firstItem="4yQ-xE-Ulm" firstAttribute="leading" secondItem="GU3-me-jT2" secondAttribute="leading" constant="10" id="ocP-jr-idj"/>
+                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="gTJ-sd-APG" secondAttribute="trailing" constant="20" symbolic="YES" id="uRy-W4-LUJ"/>
+                                                    <constraint firstAttribute="trailing" secondItem="58j-8r-aIR" secondAttribute="trailing" constant="10" id="yl7-01-Fw6"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -964,12 +1032,15 @@
                     </view>
                     <navigationItem key="navigationItem" title="Shipping Donation Method" id="iat-qu-hdQ"/>
                     <connections>
+                        <outlet property="amountDonationTextField" destination="Nhf-YH-eLC" id="rUV-Io-K47"/>
                         <outlet property="amountGosendTextField" destination="1m0-ck-HLS" id="nBf-V0-Wg0"/>
                         <outlet property="amountGrabTextField" destination="MoW-Zu-XkD" id="TQW-TI-jRR"/>
                         <outlet property="senderGojekTextField" destination="gOk-Le-V71" id="kJe-mK-GiF"/>
                         <outlet property="senderGrabTextField" destination="TBC-c0-GBf" id="1zd-sU-au3"/>
+                        <outlet property="senderTransferTextField" destination="ktS-P0-nN2" id="nQ5-Xf-9Pa"/>
                         <outlet property="trackingGoSendTextField" destination="c27-vY-iO8" id="0uF-lt-f71"/>
                         <outlet property="trackingGrabTextField" destination="B4h-XL-rd9" id="T7Q-Rc-HMu"/>
+                        <outlet property="transferProofTextField" destination="kX8-7G-6W2" id="daY-YT-MdL"/>
                         <segue destination="GkH-7G-7XX" kind="show" identifier="toFinishDonateSegue" id="pFe-ji-tSc"/>
                     </connections>
                 </viewController>

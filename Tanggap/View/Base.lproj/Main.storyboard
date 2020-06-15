@@ -539,12 +539,33 @@
         <scene sceneID="cTn-ah-hs5">
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="bbn-fp-8av" customClass="NotificationVC" customModule="Tanggap" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="J3I-zh-njN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oeA-I0-nhi">
+                                <rect key="frame" x="8" y="44" width="398" height="769"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="oeA-I0-nhi" firstAttribute="top" secondItem="2vH-CS-gbJ" secondAttribute="top" id="Lar-1o-BEm"/>
+                            <constraint firstItem="oeA-I0-nhi" firstAttribute="leading" secondItem="2vH-CS-gbJ" secondAttribute="leading" constant="8" id="PRF-0g-e0w"/>
+                            <constraint firstItem="2vH-CS-gbJ" firstAttribute="bottom" secondItem="oeA-I0-nhi" secondAttribute="bottom" id="c7k-Ly-AYG"/>
+                            <constraint firstItem="2vH-CS-gbJ" firstAttribute="trailing" secondItem="oeA-I0-nhi" secondAttribute="trailing" constant="8" id="cYd-H5-aDI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2vH-CS-gbJ"/>
+                    </view>
                     <tabBarItem key="tabBarItem" title="Notification" image="archivebox" catalog="system" id="LD8-5D-FDO" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
                         <connections>
                             <outlet property="animation" destination="xqX-yx-Yww" id="8hG-rJ-g4g"/>
                         </connections>
                     </tabBarItem>
                     <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="notificationTableView" destination="oeA-I0-nhi" id="9ag-by-kqg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5VZ-Ty-cI5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <customObject id="xqX-yx-Yww" customClass="RAMBounceAnimation" customModule="RAMAnimatedTabBarController"/>
@@ -1056,60 +1077,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="99i-e7-L2O">
-                                <rect key="frame" x="0.0" y="85" width="414" height="725"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="a3e-lZ-Vir">
+                                <rect key="frame" x="0.0" y="98" width="414" height="700"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gsd-lY-GzE">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="700"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TQl-Ft-LrJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="600"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FKQ-qi-qRp">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="600"/>
-                                                <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0.19 - ThanksForTheDonation Screen" translatesAutoresizingMaskIntoConstraints="NO" id="FpT-v6-6BL">
-                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="600"/>
-                                                    </imageView>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lpq-Gm-i5P">
-                                                        <rect key="frame" x="10" y="484" width="394" height="66"/>
-                                                        <state key="normal" image="0.10 - Back To Home Button"/>
-                                                        <connections>
-                                                            <action selector="backToHomeBtnPressed:" destination="f2S-79-HDw" eventType="touchUpInside" id="o3y-jh-Dpo"/>
-                                                        </connections>
-                                                    </button>
-                                                </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                                <constraints>
-                                                    <constraint firstItem="lpq-Gm-i5P" firstAttribute="centerX" secondItem="FKQ-qi-qRp" secondAttribute="centerX" id="85s-J2-T55"/>
-                                                    <constraint firstAttribute="height" constant="600" id="Atn-S4-Nx5"/>
-                                                    <constraint firstAttribute="trailing" secondItem="FpT-v6-6BL" secondAttribute="trailing" id="HLt-ww-jfB"/>
-                                                    <constraint firstItem="FpT-v6-6BL" firstAttribute="leading" secondItem="FKQ-qi-qRp" secondAttribute="leading" id="I3f-9a-kdQ"/>
-                                                    <constraint firstAttribute="trailing" secondItem="lpq-Gm-i5P" secondAttribute="trailing" constant="10" id="K3M-C5-wdj"/>
-                                                    <constraint firstItem="FpT-v6-6BL" firstAttribute="top" secondItem="FKQ-qi-qRp" secondAttribute="top" id="LmE-Is-vNh"/>
-                                                    <constraint firstAttribute="bottom" secondItem="lpq-Gm-i5P" secondAttribute="bottom" constant="50" id="WmU-Od-H5c"/>
-                                                    <constraint firstAttribute="bottom" secondItem="FpT-v6-6BL" secondAttribute="bottom" id="yDu-NA-dYW"/>
-                                                    <constraint firstItem="lpq-Gm-i5P" firstAttribute="leading" secondItem="FKQ-qi-qRp" secondAttribute="leading" constant="10" id="zGF-q1-VJb"/>
-                                                </constraints>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="peu-bt-CG4">
-                                                <rect key="frame" x="0.0" y="600" width="414" height="100"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="100" id="7dw-bi-7NV"/>
-                                                </constraints>
-                                            </view>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0.19 - ThanksForTheDonation Screen" translatesAutoresizingMaskIntoConstraints="NO" id="d8n-FY-OWv">
+                                                <rect key="frame" x="1" y="1" width="412" height="598"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UcZ-gk-KD2">
+                                                <rect key="frame" x="10" y="484" width="396" height="66"/>
+                                                <state key="normal" image="0.10 - Back To Home Button"/>
+                                                <connections>
+                                                    <action selector="backToHomeBtnPressed:" destination="f2S-79-HDw" eventType="touchUpInside" id="uTx-GF-NfU"/>
+                                                    <action selector="goToHomeScreenBtnPressed:" destination="GkH-7G-7XX" eventType="touchUpInside" id="SbR-Ky-CKR"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
-                                    </stackView>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="UcZ-gk-KD2" firstAttribute="leading" secondItem="TQl-Ft-LrJ" secondAttribute="leading" constant="10" id="47h-K9-IkY"/>
+                                            <constraint firstAttribute="bottom" secondItem="UcZ-gk-KD2" secondAttribute="bottom" constant="50" id="9kf-J5-2zP"/>
+                                            <constraint firstAttribute="trailing" secondItem="d8n-FY-OWv" secondAttribute="trailing" constant="1" id="Ulm-cx-c17"/>
+                                            <constraint firstItem="d8n-FY-OWv" firstAttribute="leading" secondItem="TQl-Ft-LrJ" secondAttribute="leading" constant="1" id="jif-j9-bHg"/>
+                                            <constraint firstItem="d8n-FY-OWv" firstAttribute="top" secondItem="TQl-Ft-LrJ" secondAttribute="top" constant="1" id="k0o-u8-GIm"/>
+                                            <constraint firstAttribute="trailing" secondItem="UcZ-gk-KD2" secondAttribute="trailing" constant="8" id="paP-8G-ygu"/>
+                                            <constraint firstAttribute="height" constant="600" id="u5z-dM-5V6"/>
+                                            <constraint firstAttribute="bottom" secondItem="d8n-FY-OWv" secondAttribute="bottom" constant="1" id="xQl-Uw-2Ou"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fJh-Rr-aVL">
+                                        <rect key="frame" x="0.0" y="600" width="414" height="100"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="EFw-kn-zfq"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="gsd-lY-GzE" firstAttribute="bottom" secondItem="aoX-an-Cg6" secondAttribute="bottom" id="3cQ-jZ-6c5"/>
-                                    <constraint firstItem="gsd-lY-GzE" firstAttribute="top" secondItem="aoX-an-Cg6" secondAttribute="top" id="LHX-vG-Hqp"/>
-                                    <constraint firstItem="gsd-lY-GzE" firstAttribute="trailing" secondItem="aoX-an-Cg6" secondAttribute="trailing" id="Wab-tT-iDe"/>
-                                    <constraint firstItem="gsd-lY-GzE" firstAttribute="leading" secondItem="aoX-an-Cg6" secondAttribute="leading" id="ugB-9L-5Fn"/>
-                                    <constraint firstItem="gsd-lY-GzE" firstAttribute="width" secondItem="6LC-zk-fFv" secondAttribute="width" id="xVr-r2-6j6"/>
-                                </constraints>
-                                <viewLayoutGuide key="contentLayoutGuide" id="aoX-an-Cg6"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="6LC-zk-fFv"/>
-                            </scrollView>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Fyv-L4-8rR"/>
@@ -1118,7 +1124,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b74-by-t64" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9490" y="560"/>
+            <point key="canvasLocation" x="9488.4057971014499" y="559.15178571428567"/>
         </scene>
         <!--Settings-->
         <scene sceneID="IdD-VK-gqi">

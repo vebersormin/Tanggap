@@ -14,5 +14,16 @@ class FinishDonateScreenVC: UIViewController {
         super.viewDidLoad()
 
     }
+    
 
+    @IBAction func goToHomeScreenBtnPressed(_ sender: Any) {
+        goToHomeScreen()
+    }
+    
+    @objc func goToHomeScreen(){
+        let sb = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "homeStoryboard")
+        sb.tabBarController?.tabBar.isHidden = false
+        sb.modalPresentationStyle = .fullScreen
+        self.present(sb, animated: true, completion: nil)
+    }
 }

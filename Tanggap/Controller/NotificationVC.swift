@@ -61,9 +61,6 @@ class NotificationVC: UIViewController {
         }
 
     }
-    
-    
-    
 }
 
 extension NotificationVC: UITableViewDataSource, UITableViewDelegate {

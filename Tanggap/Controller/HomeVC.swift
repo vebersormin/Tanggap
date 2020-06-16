@@ -13,17 +13,21 @@ class HomeVC: UIViewController {
     
     
     @IBOutlet weak var theTableView: UITableView!
+    @IBOutlet weak var searchBar: UISearchBar!
     
     let db = Firestore.firestore()
     var feedArr: [requesterDetail] = []
+    var filteredData: [requesterDetail]!
+    var isFiltering = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         theTableView.dataSource = self
         theTableView.delegate = self
-        
+        searchBar.delegate = self
         theTableView.register(UINib(nibName: "DetailCell", bundle: nil), forCellReuseIdentifier: "DetailCell")
+        filteredData = feedArr
         fetchDocumentFB()
     }
     
@@ -70,25 +74,37 @@ class HomeVC: UIViewController {
     }
 }
 
-extension HomeVC: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        return feedArr.count
-    }
+extension HomeVC: UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+            updateSearchResults(searchText: searchText)
+        }
+
+    func updateSearchResults(searchText: String) {
+        if searchText.isEmpty {
+            filteredData = feedArr
+            isFiltering = false
+        } else {
+            filteredData = feedArr.filter{$0.desc.range(of: searchText, options: .caseInsensitive) != nil }
+            isFiltering = true
+        }
+        theTableView.reloadData()
+    }
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
+        return isFiltering ? filteredData.count : feedArr.count
+    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        if let cell = theTableView.dequeueReusableCell(withIdentifier: "DetailCell", for: indexPath) as? DetailCell {
-            
-            cell.configCell(configUserDetail: feedArr[indexPath.row])
-            
-            return cell
-        }
-        return UITableViewCell()
-        
+        let cell = theTableView.dequeueReusableCell(withIdentifier: "DetailCell", for: indexPath) as! DetailCell
+        let cellFiltered = isFiltering ? filteredData[indexPath.row] : feedArr[indexPath.row]
+        cell.nameTextField.text = cellFiltered.name
+        cell.addrTextField.text = cellFiltered.addr
+        cell.descTextField.text = cellFiltered.desc
+        cell.amountOfQtyTextField.text = String(cellFiltered.qty)
+        return cell
     }
-    
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         

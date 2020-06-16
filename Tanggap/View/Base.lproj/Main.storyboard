@@ -16,10 +16,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0.1 - Sign In Screen" translatesAutoresizingMaskIntoConstraints="NO" id="mKD-jn-wCL">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896.00000000000182"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="uTM-Jg-uaN">
-                                <rect key="frame" x="20" y="158" width="374" height="321.5"/>
+                                <rect key="frame" x="20" y="158" width="374" height="453.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AKSI!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fac-lG-6D5">
                                         <rect key="frame" x="146.5" y="0.0" width="81.5" height="41.5"/>
@@ -34,20 +34,20 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mpx-Kw-8SU" userLabel="Signin">
-                                        <rect key="frame" x="16.5" y="119" width="341" height="66"/>
+                                        <rect key="frame" x="0.0" y="119" width="374" height="132"/>
                                         <state key="normal" image="0.15 - Login Button"/>
                                         <connections>
                                             <segue destination="Nb6-NK-2ff" kind="show" id="Oqd-dW-WrY"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gPL-w4-rub">
-                                        <rect key="frame" x="175.5" y="210" width="23.5" height="20.5"/>
+                                        <rect key="frame" x="175.5" y="276" width="23.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2SM-OF-Kxg" userLabel="Register">
-                                        <rect key="frame" x="16.5" y="255.5" width="341" height="66"/>
+                                        <rect key="frame" x="0.0" y="321.5" width="374" height="132"/>
                                         <state key="normal" image="0.14 - Register New Button"/>
                                         <connections>
                                             <segue destination="Du1-nB-pIE" kind="show" id="TMC-pC-ry5"/>
@@ -95,7 +95,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="414" height="500"/>
                                                     </imageView>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pop BG-2" translatesAutoresizingMaskIntoConstraints="NO" id="Qmw-o2-uig">
-                                                        <rect key="frame" x="0.0" y="300" width="414" height="200.00000000000023"/>
+                                                        <rect key="frame" x="0.0" y="300" width="414" height="200"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="200" id="SQp-kB-U2R"/>
                                                         </constraints>
@@ -183,7 +183,7 @@
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D8N-fo-xH0">
-                                                        <rect key="frame" x="0.0" y="236" width="414" height="56"/>
+                                                        <rect key="frame" x="0.0" y="180" width="414" height="112"/>
                                                         <state key="normal" image="0.16 - RegisterToHomeButton"/>
                                                         <connections>
                                                             <action selector="registerBtnPressed:" destination="Du1-nB-pIE" eventType="touchUpInside" id="mce-BE-NSV"/>
@@ -276,7 +276,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="414" height="500"/>
                                                     </imageView>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pop BG-2" translatesAutoresizingMaskIntoConstraints="NO" id="5hC-xJ-4AD">
-                                                        <rect key="frame" x="0.0" y="300" width="414" height="200.00000000000023"/>
+                                                        <rect key="frame" x="0.0" y="300" width="414" height="200"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="200" id="adH-zt-SvN"/>
                                                         </constraints>
@@ -328,7 +328,7 @@
                                                 <rect key="frame" x="0.0" y="500" width="414" height="250"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jrz-bt-I4m">
-                                                        <rect key="frame" x="0.0" y="184" width="414" height="56"/>
+                                                        <rect key="frame" x="0.0" y="128" width="414" height="112"/>
                                                         <state key="normal" image="0.18 - Send OTP Button"/>
                                                         <connections>
                                                             <action selector="sendOtpBtnPressed:" destination="Nb6-NK-2ff" eventType="touchUpInside" id="0uR-n1-YXR"/>
@@ -432,7 +432,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="414" height="600"/>
                                                     </imageView>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pop BG-2" translatesAutoresizingMaskIntoConstraints="NO" id="KQU-j7-8XS">
-                                                        <rect key="frame" x="0.0" y="400" width="414" height="200.00000000000023"/>
+                                                        <rect key="frame" x="0.0" y="400" width="414" height="200"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="200" id="1em-gp-Y5b"/>
                                                         </constraints>
@@ -472,7 +472,7 @@
                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="go"/>
                                                     </textField>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aek-wi-gJI">
-                                                        <rect key="frame" x="35.5" y="140" width="343" height="55"/>
+                                                        <rect key="frame" x="-136" y="140" width="686" height="55"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="55" id="w0i-9t-Ced"/>
                                                         </constraints>
@@ -583,6 +583,11 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dQA-ik-yuf">
                                 <rect key="frame" x="68" y="88" width="338" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Search " id="WpU-UQ-s0n">
+                                    <rect key="frame" x="0.0" y="0.0" width="338" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </searchBar>
                             </tableView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0.24 - Feeds Background" translatesAutoresizingMaskIntoConstraints="NO" id="yeT-fu-rIg">
                                 <rect key="frame" x="0.0" y="88" width="60" height="725"/>
@@ -605,6 +610,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="M31-zh-8mw"/>
                     <connections>
+                        <outlet property="searchBar" destination="WpU-UQ-s0n" id="rKf-hj-eV8"/>
                         <outlet property="theTableView" destination="dQA-ik-yuf" id="3a1-I6-W53"/>
                         <segue destination="RyW-g2-UCc" kind="show" identifier="toRequestDetailSegue" id="neP-hq-TS9"/>
                     </connections>

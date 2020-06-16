@@ -35,6 +35,23 @@ class PhoneVerificationVC: UIViewController {
         phoneInsertOtp()
     }
     
+    func checkUsername(field: Int, completion: @escaping (Bool) -> Void) {
+        let collectionRef = db.collection("RegisterUser")
+        collectionRef.whereField("newPhoneNumber", isEqualTo: field).getDocuments { (snapshot, err) in
+            if let err = err {
+                print("Error getting document: \(err)")
+            } else if (snapshot?.isEmpty)! {
+                completion(false)
+            } else {
+                for document in (snapshot?.documents)! {
+                    if document.data()["newPhoneNumber"] != nil {
+                        completion(true)
+                    }
+                }
+            }
+        }
+    }
+    
     
     func phoneInsertOtp(){
         guard let otpCodeString = otpCodeTextField.text, otpCodeString.isNotEmpty,
@@ -70,18 +87,25 @@ class PhoneVerificationVC: UIViewController {
         }
         self.phoneNumber = phoneNumberToInt
         
-        PhoneAuthProvider.provider(auth: Auth.auth())
-        
-        PhoneAuthProvider.provider().verifyPhoneNumber(phoneNumberInserted, uiDelegate: nil) { (verificationId, error) in
-            if(error != nil){
-                print("\(error!.localizedDescription)")
-            }else{
-                self.userDefault.set(verificationId, forKey: "authVerificationID")
+        self.checkUsername(field: phoneNumber) { (success) in
+            if success == true {
+                print("Username has been registered")
+                PhoneAuthProvider.provider(auth: Auth.auth())
+
+                PhoneAuthProvider.provider().verifyPhoneNumber(phoneNumberInserted, uiDelegate: nil) { (verificationId, error) in
+                    if(error != nil){
+                        print("\(error!.localizedDescription)")
+                    }else{
+                        self.userDefault.set(verificationId, forKey: "authVerificationID")
+                    }
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(20), execute: {
+                    self.goToOtpScreen()
+                })
+            } else {
+                self.simpleAlert(title: "New User Detected!☺️", msg: "Please Register First")
             }
         }
-        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(20), execute: {
-            self.goToOtpScreen()
-        })
     }
         
     @objc func goToOtpScreen(){

@@ -29,6 +29,22 @@ class PhoneRegisterVC: UIViewController {
         requestToFb()
     }
     
+    func checkUsername(field: Int, completion: @escaping (Bool) -> Void) {
+        let collectionRef = db.collection("RegisterUser")
+        collectionRef.whereField("newPhoneNumber", isEqualTo: field).getDocuments { (snapshot, err) in
+            if let err = err {
+                print("Error getting document: \(err)")
+            } else if (snapshot?.isEmpty)! {
+                completion(false)
+            } else {
+                for document in (snapshot?.documents)! {
+                    if document.data()["newPhoneNumber"] != nil {
+                        completion(true)
+                    }
+                }
+            }
+        }
+    }
     
     func requestToFb(){
         guard let fullName = fullNameTextField.text, fullName.isNotEmpty,
@@ -43,7 +59,14 @@ class PhoneRegisterVC: UIViewController {
         self.userEmail = email
         self.userPhoneNumber = registerNumber
         
-        self.uploadToFb()
+        self.checkUsername(field: userPhoneNumber) { (success) in
+            if success == true {
+                print("Phone Number has been registered")
+                self.simpleAlert(title: "Phone Number Has Been Registered", msg: "Please Login or Insert a Different Number")
+            } else {
+                self.uploadToFb()
+            }
+        }
     }
     
     func uploadToFb(){
@@ -56,7 +79,17 @@ class PhoneRegisterVC: UIViewController {
                     self.simpleAlert(title: "Firestore Error", msg: "\(err)")
                 }else{
                     print("Data Saved To Firestore")
+                    self.toLoginScreen()
                 }
         }
+    }
+    
+    @objc func toLoginScreen(){
+        try! Auth.auth().signOut()
+        
+        let sb = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "toLoginScreenStoryboard")
+        
+        sb.modalPresentationStyle = .fullScreen
+        self.present(sb, animated: true, completion: nil)
     }
 }

@@ -36,7 +36,6 @@ class RequestFormVC: UIViewController {
         uploadDocsToFb()
     }
     
-    
     func uploadDocsToFb(){
         
         guard let name = nameTextField.text, name.isNotEmpty,

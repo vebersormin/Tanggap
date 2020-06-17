@@ -15,7 +15,6 @@ class FinishDonateScreenVC: UIViewController {
 
     }
     
-
     @IBAction func goToHomeScreenBtnPressed(_ sender: Any) {
         goToHomeScreen()
     }

@@ -33,7 +33,7 @@ class HomeVC: UIViewController {
     
     func fetchDocumentFB(){
         //Only Fetch Doc From FB. Not Shown.
-        db.collection("requesterDetail").order(by: "name").addSnapshotListener { (querySnapshot, error) in
+        db.collection("requesterDetail").order(by: "time", descending: true).addSnapshotListener { (querySnapshot, error) in
             self.feedArr = []
             
             if let e = error {

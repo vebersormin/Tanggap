@@ -705,33 +705,37 @@
                                                             <action selector="donateNowBtnPressed:" destination="RyW-g2-UCc" eventType="touchUpInside" id="FcZ-ww-i9h"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RDu-KL-aHn">
-                                                        <rect key="frame" x="35" y="183" width="166" height="66"/>
-                                                        <state key="normal" image="0.7 - Call Button"/>
-                                                        <connections>
-                                                            <action selector="callBtnPressed:" destination="RyW-g2-UCc" eventType="touchUpInside" id="sCL-O4-6xC"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xoF-ue-vt7">
-                                                        <rect key="frame" x="213" y="183" width="166" height="66"/>
-                                                        <state key="normal" image="0.21 - WA button"/>
-                                                        <connections>
-                                                            <action selector="waBtnPressed:" destination="RyW-g2-UCc" eventType="touchUpInside" id="eK0-ta-cws"/>
-                                                        </connections>
-                                                    </button>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="gyn-eK-n3L">
+                                                        <rect key="frame" x="30" y="183" width="354" height="66"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RDu-KL-aHn">
+                                                                <rect key="frame" x="0.0" y="0.0" width="176" height="66"/>
+                                                                <state key="normal" image="0.7 - Call Button"/>
+                                                                <connections>
+                                                                    <action selector="callBtnPressed:" destination="RyW-g2-UCc" eventType="touchUpInside" id="sCL-O4-6xC"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xoF-ue-vt7">
+                                                                <rect key="frame" x="188" y="0.0" width="166" height="66"/>
+                                                                <state key="normal" image="0.21 - WA button"/>
+                                                                <connections>
+                                                                    <action selector="waBtnPressed:" destination="RyW-g2-UCc" eventType="touchUpInside" id="eK0-ta-cws"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <constraints>
                                                     <constraint firstItem="BBl-cy-e6a" firstAttribute="top" secondItem="0co-od-Am9" secondAttribute="top" constant="10" id="1x1-Rw-tke"/>
-                                                    <constraint firstItem="RDu-KL-aHn" firstAttribute="leading" secondItem="0co-od-Am9" secondAttribute="leading" constant="35" id="8Lb-Nx-LN7"/>
-                                                    <constraint firstItem="XIS-VO-X1j" firstAttribute="top" secondItem="RDu-KL-aHn" secondAttribute="bottom" constant="10" id="AmO-eu-pIW"/>
+                                                    <constraint firstAttribute="trailing" secondItem="gyn-eK-n3L" secondAttribute="trailing" constant="30" id="BiJ-UD-Ovc"/>
                                                     <constraint firstItem="BBl-cy-e6a" firstAttribute="leading" secondItem="0co-od-Am9" secondAttribute="leading" constant="10" id="Cbt-c5-3ZL"/>
-                                                    <constraint firstItem="XIS-VO-X1j" firstAttribute="top" secondItem="xoF-ue-vt7" secondAttribute="bottom" constant="10" id="P5V-v3-2CW"/>
                                                     <constraint firstAttribute="bottom" secondItem="XIS-VO-X1j" secondAttribute="bottom" constant="25" id="VJB-x6-RZA"/>
+                                                    <constraint firstItem="gyn-eK-n3L" firstAttribute="leading" secondItem="0co-od-Am9" secondAttribute="leading" constant="30" id="arY-4X-psk"/>
+                                                    <constraint firstItem="XIS-VO-X1j" firstAttribute="top" secondItem="gyn-eK-n3L" secondAttribute="bottom" constant="10" id="cYl-fD-bzw"/>
                                                     <constraint firstAttribute="trailing" secondItem="XIS-VO-X1j" secondAttribute="trailing" constant="10" id="gWP-Wa-Nsr"/>
                                                     <constraint firstItem="XIS-VO-X1j" firstAttribute="leading" secondItem="0co-od-Am9" secondAttribute="leading" constant="10" id="tNu-70-LjR"/>
                                                     <constraint firstAttribute="height" constant="350" id="xdu-iD-d4J"/>
-                                                    <constraint firstAttribute="trailing" secondItem="xoF-ue-vt7" secondAttribute="trailing" constant="35" id="y0C-y9-Wz4"/>
                                                 </constraints>
                                             </view>
                                         </subviews>

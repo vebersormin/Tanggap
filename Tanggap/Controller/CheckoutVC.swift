@@ -52,119 +52,99 @@ class CheckoutVC: UIViewController {
 
     
     @IBAction func confirmGosendBtnPressed(_ sender: Any) {
-        editAmountOfQtyGosend(amount: amountGosendTextField)
+        checkMissingField(sender: senderGojekTextField, tracker: trackingGoSendTextField, amountQty: amountGosendTextField, method: "Gosend")
+        editAmountOfQtyGosend(amount: amount)
     }
     
     
     @IBAction func confirmGrabBtnPressed(_ sender: Any) {
-        editAmountOfQtyGrab(amount: amountGrabTextField)
+        checkMissingField(sender: senderGrabTextField, tracker: trackingGrabTextField, amountQty: amountGrabTextField, method: "Grab Express")
+        editAmountOfQtyGrab(amount: amount)
     }
     
     
     @IBAction func confirmTransferBtnPressed(_ sender: Any) {
-        editAmountOfQtyTransfer(amount: amountDonationTextField)
+        checkMissingField(sender: senderTransferTextField, tracker: transferProofTextField, amountQty: amountDonationTextField, method: "Transfer / M-Banking")
+        editAmountOfQtyGrab(amount: amount)
     }
     
-    
-    
-    func editAmountOfQtyGrab(amount: UITextField){
+    func editAmountOfQtyGrab(amount: Int){
         
-        let amountOfQtyInput = amount.text!
-        let amountOfQtyInt = Int(amountOfQtyInput)!
-        let newAmountOfQty = amountOfQtyNeeded - amountOfQtyInt
-        let DonationMethod = "Grab Express"
-        theDonationMethod = DonationMethod
-                
-        if newAmountOfQty < 0 {
-            simpleAlert(title: "The amount of donation is too much", msg: "Please donate not more than \(amountOfQtyNeeded)")
-        }
-        else{
-            db.document(requesterId).updateData([
-                "qty": newAmountOfQty,
-                ]) { err in
-                    if let err = err {
-                        print("Error updating document: \(err)")
-                    } else {
-                        self.uploadDonorDocsToFB(sender: self.senderGrabTextField, tracker: self.trackingGrabTextField, amountQty: self.amountGrabTextField, method: self.theDonationMethod)
-                        print("Document successfully updated")
-                    }
-            }
-        }
-    }
-    
-    func editAmountOfQtyGosend(amount: UITextField){
-        
-        let amountOfQtyInput = amount.text!
-        let amountOfQtyInt = Int(amountOfQtyInput)!
-        let newAmountOfQty = amountOfQtyNeeded - amountOfQtyInt
-        let DonationMethod = "Gosend"
-        theDonationMethod = DonationMethod
+        let amountOfQtyInput = amount
+        let newAmountOfQty = amountOfQtyNeeded - amountOfQtyInput
         
         if newAmountOfQty < 0 {
             simpleAlert(title: "The amount of donation is too much", msg: "Please donate not more than \(amountOfQtyNeeded)")
         }
-        else{
-            db.document(requesterId).updateData([
-                "qty" : newAmountOfQty,
-            ]) { (err) in
-                if let err = err {
-                    print("Error updating document: \(err)")
-                } else {
-                    self.uploadDonorDocsToFB(sender: self.senderGojekTextField, tracker: self.trackingGoSendTextField, amountQty: self.amountGosendTextField, method: self.theDonationMethod)
-                    print("Document successfully updated")
-                }
-            }
-        }
-        
-    }
-    
-    func editAmountOfQtyTransfer(amount: UITextField){
-        
-        let amountOfQtyInput = amount.text!
-        let amountOfQtyInt = Int(amountOfQtyInput)!
-        let newAmountOfQty = amountOfQtyNeeded - amountOfQtyInt
-        let DonationMethod = "Transfer"
-        theDonationMethod = DonationMethod
-        
-        if newAmountOfQty < 0 {
-            simpleAlert(title: "The amount of donation is too much", msg: "Please donate not more than \(amountOfQtyNeeded)")
+        else if amountOfQtyInput == 0 {
+            simpleAlert(title: "Number invalid", msg: "Number 0 detected, Please insert a valid number")
         }
         else{
             db.document(requesterId).updateData(["qty" : newAmountOfQty]) { (err) in
                 if let err = err {
                     print("Error updating document: \(err)")
                 } else {
-                    self.uploadDonorDocsToFB(sender: self.senderTransferTextField, tracker: self.transferProofTextField, amountQty: self.amountDonationTextField, method: self.theDonationMethod)
+                    self.uploadDonorDocsToFB(amountOfQty: amountOfQtyInput)
                     print("Document successfully updated")
                 }
             }
         }
-        
     }
     
-    func uploadDonorDocsToFB(sender: UITextField, tracker: UITextField, amountQty: UITextField, method: String){
+    func editAmountOfQtyGosend(amount: Int){
         
-        let amountOfQtyInput = amountQty.text!
-        let amountOfQtyInt = Int(amountOfQtyInput)!
-        let newAmountOfQty = amountOfQtyNeeded - amountOfQtyInt
-        let methodUse = method
+        let amountOfQtyInput = amount
+        let newAmountOfQty = amountOfQtyNeeded - amountOfQtyInput
         
-        guard let sender = sender.text, sender.isNotEmpty,
-            let trackLink = tracker.text, trackLink.isNotEmpty,
-            let amountString = amountQty.text, amountString.isNotEmpty,
-            let amount = Int(amountString) else {
-                
-                simpleAlert(title: "Missing Field", msg: "Please Fill All Fields Correctly")
-                return
+        if newAmountOfQty < 0 {
+            simpleAlert(title: "The amount of donation is too much", msg: "Please donate not more than \(amountOfQtyNeeded)")
         }
-        self.sender = sender
-        self.track = trackLink
-        self.amount = amount
-        self.theDonationMethod = methodUse
+        else if amountOfQtyInput == 0 {
+            simpleAlert(title: "Number invalid", msg: "Number 0 detected, Please insert a valid number")
+        }
+        else{
+            db.document(requesterId).updateData(["qty" : newAmountOfQty]) { (err) in
+                if let err = err {
+                    print("Error updating document: \(err)")
+                } else {
+                    self.uploadDonorDocsToFB(amountOfQty: amountOfQtyInput)
+                    print("Document successfully updated")
+                }
+            }
+        }
+    }
+    
+    func editAmountOfQtyTransfer(amount: Int){
+        
+        let amountOfQtyInput = amount
+        let newAmountOfQty = amountOfQtyNeeded - amountOfQtyInput
+        
+        if newAmountOfQty < 0 {
+            simpleAlert(title: "The amount of donation is too much", msg: "Please donate not more than \(amountOfQtyNeeded)")
+        }
+        else if amountOfQtyInput == 0 {
+            simpleAlert(title: "Number invalid", msg: "Number 0 detected, Please insert a valid number")
+        }
+        else{
+            db.document(requesterId).updateData(["qty" : newAmountOfQty]) { (err) in
+                if let err = err {
+                    print("Error updating document: \(err)")
+                } else {
+                    self.uploadDonorDocsToFB(amountOfQty: amountOfQtyInput)
+                    print("Document successfully updated")
+                }
+            }
+        }
+    }
+    
+    func uploadDonorDocsToFB(amountOfQty: Int){
+        
+        let amountOfQtyInput = amountOfQty
+        let newAmountOfQty = amountOfQtyNeeded - amountOfQtyInput
         
         if newAmountOfQty == 0{
-            uploadDonorDocs()
             deleteDocs()
+            uploadDonorDocs()
         }else {
             uploadDonorDocs()
         }
@@ -203,6 +183,22 @@ class CheckoutVC: UIViewController {
     func deleteDocs(){
         let collectionDocument = db.document(requesterId)
         collectionDocument.delete()
+    }
+    
+    func checkMissingField(sender: UITextField, tracker: UITextField, amountQty: UITextField, method: String){
+                
+        guard let sender = sender.text, sender.isNotEmpty,
+            let trackLink = tracker.text, trackLink.isNotEmpty,
+            let amountString = amountQty.text, amountString.isNotEmpty,
+            let amount = Int(amountString)
+            else {
+                simpleAlert(title: "Missing Field", msg: "Please Fill All Fields Correctly")
+                return
+            }
+            self.sender = sender
+            self.track = trackLink
+            self.amount = amount
+            self.theDonationMethod = method
     }
     
     @objc func toFinishScreen (){

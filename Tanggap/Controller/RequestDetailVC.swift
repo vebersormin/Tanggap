@@ -32,13 +32,6 @@ class RequestDetailVC: UIViewController {
         setUI()
     }
     
-    func setUI(){
-        nameTextField.text = postForm?.name
-        addressTextField.text = postForm?.addr
-        QtyTextField.text = String(postForm!.qty)
-        descBoxTextField.text = postForm?.desc
-    }
-    
     @IBAction func callBtnPressed(_ sender: Any) {
         guard let phoneURL = URL(string: "\(urlSchema)\(postForm!.phone)")
             else {return}
@@ -47,6 +40,12 @@ class RequestDetailVC: UIViewController {
         }else{
             simpleAlert(title: "Phone Number Not Avail.", msg: "Cannot Call Requester")
         }
+    }
+    
+    
+    @IBAction func waBtnPressed(_ sender: Any) {
+        let waNumber = postForm!.phone
+        openWhatsApp(number: waNumber)
     }
     
     
@@ -62,6 +61,33 @@ class RequestDetailVC: UIViewController {
         performSegue(withIdentifier: "toCheckoutSegue", sender: self)
     }
     
+    func setUI(){
+        nameTextField.text = postForm?.name
+        addressTextField.text = postForm?.addr
+        QtyTextField.text = String(postForm!.qty)
+        descBoxTextField.text = postForm?.desc
+    }
+    
+    func openWhatsApp(number : String){
+        
+        var fullMob = number
+        fullMob = fullMob.replacingOccurrences(of: " ", with: "")
+        fullMob = fullMob.replacingOccurrences(of: "+", with: "")
+        fullMob = fullMob.replacingOccurrences(of: "-", with: "")
+        let urlWhats = "whatsapp://send?phone=\(fullMob)"
+        
+        if let urlString = urlWhats.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed) {
+            if let whatsappURL = NSURL(string: urlString) {
+                if UIApplication.shared.canOpenURL(whatsappURL as URL) {
+                    UIApplication.shared.open(whatsappURL as URL, options: [:], completionHandler: { (Bool) in
+                    })
+                } else {
+                    simpleAlert(title: "Whatsapp Number is Not Available", msg: "Please use call feature")
+                }
+            }
+        }
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toCheckoutSegue" {
             let destVC = segue.destination as! CheckoutVC
@@ -73,8 +99,5 @@ class RequestDetailVC: UIViewController {
             destVC.requesterPhoneNum = self.phoneText
             destVC.amountOfQtyNeeded = self.qtyText
         }
-        
     }
-    
-    
 }

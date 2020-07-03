@@ -22,6 +22,7 @@
 		82237C49248A09B000075817 /* RegisterUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82237C48248A09B000075817 /* RegisterUser.swift */; };
 		82237C4B248A0F2800075817 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82237C4A248A0F2800075817 /* Constant.swift */; };
 		82237C4D248A2F9700075817 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82237C4C248A2F9700075817 /* HomeVC.swift */; };
+		8236071124A3977C00AD08FB /* TanggapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8236071024A3977C00AD08FB /* TanggapTests.swift */; };
 		823986E82489369200B060D3 /* DetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823986E62489369200B060D3 /* DetailCell.swift */; };
 		823986E92489369200B060D3 /* DetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 823986E72489369200B060D3 /* DetailCell.xib */; };
 		823986EB2489378C00B060D3 /* RequesterDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823986EA2489378C00B060D3 /* RequesterDetail.swift */; };
@@ -38,6 +39,16 @@
 		82EB58A82499D2EF002D405B /* AboutUsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EB58A72499D2EF002D405B /* AboutUsVC.swift */; };
 		87152C0CAC457D544A19D7FB /* Pods_Tanggap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D3E86AE8F5A0FABC34C0980 /* Pods_Tanggap.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8236071324A3977C00AD08FB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8209D48D2489337E002FAA85 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8209D4942489337E002FAA85;
+			remoteInfo = Tanggap;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		068E38158AB6040ADB467C9A /* Pods-Tanggap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tanggap.release.xcconfig"; path = "Target Support Files/Pods-Tanggap/Pods-Tanggap.release.xcconfig"; sourceTree = "<group>"; };
@@ -59,6 +70,9 @@
 		82237C48248A09B000075817 /* RegisterUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUser.swift; sourceTree = "<group>"; };
 		82237C4A248A0F2800075817 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		82237C4C248A2F9700075817 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		8236070E24A3977C00AD08FB /* TanggapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TanggapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8236071024A3977C00AD08FB /* TanggapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TanggapTests.swift; sourceTree = "<group>"; };
+		8236071224A3977C00AD08FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		823986E62489369200B060D3 /* DetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCell.swift; sourceTree = "<group>"; };
 		823986E72489369200B060D3 /* DetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailCell.xib; sourceTree = "<group>"; };
 		823986EA2489378C00B060D3 /* RequesterDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequesterDetail.swift; sourceTree = "<group>"; };
@@ -85,6 +99,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8236070B24A3977C00AD08FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -101,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				8209D4972489337E002FAA85 /* Tanggap */,
+				8236070F24A3977C00AD08FB /* TanggapTests */,
 				8209D4962489337E002FAA85 /* Products */,
 				72E64052C1CBCF4DCF0C6A55 /* Pods */,
 				AA39F7CE517D5815C7B7B472 /* Frameworks */,
@@ -111,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				8209D4952489337E002FAA85 /* Tanggap.app */,
+				8236070E24A3977C00AD08FB /* TanggapTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -128,6 +151,15 @@
 				8209D4A624893381002FAA85 /* Info.plist */,
 			);
 			path = Tanggap;
+			sourceTree = "<group>";
+		};
+		8236070F24A3977C00AD08FB /* TanggapTests */ = {
+			isa = PBXGroup;
+			children = (
+				8236071024A3977C00AD08FB /* TanggapTests.swift */,
+				8236071224A3977C00AD08FB /* Info.plist */,
+			);
+			path = TanggapTests;
 			sourceTree = "<group>";
 		};
 		823986EC24894AF700B060D3 /* Controller */ = {
@@ -223,6 +255,24 @@
 			productReference = 8209D4952489337E002FAA85 /* Tanggap.app */;
 			productType = "com.apple.product-type.application";
 		};
+		8236070D24A3977C00AD08FB /* TanggapTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8236071724A3977C00AD08FB /* Build configuration list for PBXNativeTarget "TanggapTests" */;
+			buildPhases = (
+				8236070A24A3977C00AD08FB /* Sources */,
+				8236070B24A3977C00AD08FB /* Frameworks */,
+				8236070C24A3977C00AD08FB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8236071424A3977C00AD08FB /* PBXTargetDependency */,
+			);
+			name = TanggapTests;
+			productName = TanggapTests;
+			productReference = 8236070E24A3977C00AD08FB /* TanggapTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -235,6 +285,10 @@
 				TargetAttributes = {
 					8209D4942489337E002FAA85 = {
 						CreatedOnToolsVersion = 11.1;
+					};
+					8236070D24A3977C00AD08FB = {
+						CreatedOnToolsVersion = 11.1;
+						TestTargetID = 8209D4942489337E002FAA85;
 					};
 				};
 			};
@@ -252,6 +306,7 @@
 			projectRoot = "";
 			targets = (
 				8209D4942489337E002FAA85 /* Tanggap */,
+				8236070D24A3977C00AD08FB /* TanggapTests */,
 			);
 		};
 /* End PBXProject section */
@@ -267,6 +322,13 @@
 				8209D4A02489337E002FAA85 /* Main.storyboard in Resources */,
 				8209D4AD24893463002FAA85 /* GoogleService-Info.plist in Resources */,
 				823986E92489369200B060D3 /* DetailCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8236070C24A3977C00AD08FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,7 +424,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8236070A24A3977C00AD08FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8236071124A3977C00AD08FB /* TanggapTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8236071424A3977C00AD08FB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8209D4942489337E002FAA85 /* Tanggap */;
+			targetProxy = 8236071324A3977C00AD08FB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		8209D49E2489337E002FAA85 /* Main.storyboard */ = {
@@ -536,6 +614,46 @@
 			};
 			name = Release;
 		};
+		8236071524A3977C00AD08FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LGZ9VADH98;
+				INFOPLIST_FILE = TanggapTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.vebersormin.TanggapTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tanggap.app/Tanggap";
+			};
+			name = Debug;
+		};
+		8236071624A3977C00AD08FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LGZ9VADH98;
+				INFOPLIST_FILE = TanggapTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.vebersormin.TanggapTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tanggap.app/Tanggap";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -553,6 +671,15 @@
 			buildConfigurations = (
 				8209D4AA24893381002FAA85 /* Debug */,
 				8209D4AB24893381002FAA85 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8236071724A3977C00AD08FB /* Build configuration list for PBXNativeTarget "TanggapTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8236071524A3977C00AD08FB /* Debug */,
+				8236071624A3977C00AD08FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

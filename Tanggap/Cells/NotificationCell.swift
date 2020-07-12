@@ -13,6 +13,7 @@ class NotificationCell: UITableViewCell {
     @IBOutlet weak var nameTextField: UILabel!
     @IBOutlet weak var donationMethodTextField: UILabel!
     @IBOutlet weak var amountGivenTextField: UILabel!
+    @IBOutlet weak var proofTextField: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,6 +23,7 @@ class NotificationCell: UITableViewCell {
         nameTextField.text = configDonorDetail.name
         donationMethodTextField.text = configDonorDetail.typeOfDonationMethod
         amountGivenTextField.text = String(configDonorDetail.donationGiven)
+        proofTextField.text = configDonorDetail.linkDonation
     }
     
 }

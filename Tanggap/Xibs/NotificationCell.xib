@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -55,15 +55,34 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Proof:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0jz-IF-Cx0">
+                                <rect key="frame" x="10" y="139" width="49" height="24"/>
+                                <fontDescription key="fontDescription" name="PingFangSC-Medium" family="PingFang SC" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Link/Bank Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bjv-Ew-ebG">
+                                <rect key="frame" x="69" y="139" width="200" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="qAt-gK-K6J"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="CDM-Z8-Ccx" firstAttribute="leading" secondItem="4dJ-Rv-xmn" secondAttribute="trailing" constant="10" id="BAG-MR-LBm"/>
+                            <constraint firstItem="bjv-Ew-ebG" firstAttribute="leading" secondItem="0jz-IF-Cx0" secondAttribute="trailing" constant="10" id="CZU-OD-EEr"/>
                             <constraint firstItem="ww8-pj-7NX" firstAttribute="leading" secondItem="y5e-ji-1PS" secondAttribute="trailing" constant="10" id="Dys-bA-GLA"/>
                             <constraint firstItem="y5e-ji-1PS" firstAttribute="leading" secondItem="OCN-IY-ERm" secondAttribute="leading" constant="10" id="EPc-XP-D50"/>
                             <constraint firstItem="4He-TN-art" firstAttribute="top" secondItem="OCN-IY-ERm" secondAttribute="top" constant="10" id="HKD-eT-BKk"/>
+                            <constraint firstItem="0jz-IF-Cx0" firstAttribute="top" secondItem="y5e-ji-1PS" secondAttribute="bottom" constant="20" id="InB-uA-zDL"/>
+                            <constraint firstItem="bjv-Ew-ebG" firstAttribute="top" secondItem="y5e-ji-1PS" secondAttribute="bottom" constant="20" id="MUS-g2-C3c"/>
                             <constraint firstItem="CDM-Z8-Ccx" firstAttribute="top" secondItem="SQF-wH-Zsa" secondAttribute="bottom" constant="20" id="Mmw-JO-BSx"/>
                             <constraint firstItem="SQF-wH-Zsa" firstAttribute="top" secondItem="OCN-IY-ERm" secondAttribute="top" constant="10" id="N1B-yK-8XT"/>
+                            <constraint firstItem="0jz-IF-Cx0" firstAttribute="leading" secondItem="OCN-IY-ERm" secondAttribute="leading" constant="10" id="WhU-fN-LiN"/>
                             <constraint firstItem="SQF-wH-Zsa" firstAttribute="leading" secondItem="4He-TN-art" secondAttribute="trailing" constant="10" id="fRx-3s-hAi"/>
                             <constraint firstItem="ww8-pj-7NX" firstAttribute="top" secondItem="CDM-Z8-Ccx" secondAttribute="bottom" constant="20" id="fwA-B4-X0H"/>
                             <constraint firstItem="4dJ-Rv-xmn" firstAttribute="top" secondItem="4He-TN-art" secondAttribute="bottom" constant="20" id="lEC-Xm-Nqy"/>
@@ -86,6 +105,7 @@
                 <outlet property="amountGivenTextField" destination="ww8-pj-7NX" id="Tfk-f7-eQf"/>
                 <outlet property="donationMethodTextField" destination="CDM-Z8-Ccx" id="nyE-EZ-njY"/>
                 <outlet property="nameTextField" destination="SQF-wH-Zsa" id="AjZ-F3-rmC"/>
+                <outlet property="proofTextField" destination="bjv-Ew-ebG" id="RpY-Vb-fmo"/>
             </connections>
             <point key="canvasLocation" x="248.55072463768118" y="193.19196428571428"/>
         </tableViewCell>
